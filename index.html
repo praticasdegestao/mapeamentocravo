@@ -1,0 +1,1927 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Morte súbita do craveiro — Relatório executivo consolidado | Baixo Sul da Bahia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --mata:#0A3B2E;
+  --mata-2:#12563F;
+  --mata-3:#1B7355;
+  --folha:#3FA37A;
+  --oliva:#96B93C;
+  --ambar:#DFA01E;
+  --carmim:#BF2F4A;
+  --carmim-cl:#DE5C74;
+  --cravo:#5E3218;
+  --azul:#1F6FB2;
+  --azul-cl:#4E9BD8;
+  --papel:#FBF7EF;
+  --papel-2:#F2ECDF;
+  --branco:#FFFFFF;
+  --tinta:#13201B;
+  --tinta-2:#4E5F58;
+  --tinta-3:#7B8C85;
+  --linha:#E2DACA;
+  --linha-2:#CFC4AE;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:64px}
+body{
+  margin:0;
+  font-family:'IBM Plex Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  font-size:16.5px;line-height:1.62;color:var(--tinta);background:var(--papel);
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:1180px;margin:0 auto;padding:0 30px}
+.narrow{max-width:880px}
+
+/* ---------- tipografia ---------- */
+h1,h2,h3,h4{margin:0;font-weight:400}
+.disp{font-family:'Instrument Serif',Georgia,serif;font-weight:400;letter-spacing:-.01em}
+.eyebrow{
+  font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--tinta-3);display:block;margin-bottom:14px;
+}
+.sec-t{font-family:'Instrument Serif',Georgia,serif;font-size:clamp(31px,4.6vw,52px);line-height:1.02;margin:0 0 18px}
+.sub-t{font-size:20px;font-weight:600;line-height:1.3;margin:0 0 10px}
+.lead{font-size:19px;line-height:1.55;color:var(--tinta-2);max-width:74ch}
+p{margin:0 0 15px}
+.small{font-size:14px;line-height:1.55;color:var(--tinta-2)}
+.tiny{font-family:'IBM Plex Mono',monospace;font-size:11.5px;line-height:1.5;color:var(--tinta-3);letter-spacing:.02em}
+em.sci{font-style:italic}
+strong{font-weight:600}
+a{color:var(--azul);text-decoration:none;border-bottom:1px solid rgba(31,111,178,.3)}
+a:hover{border-bottom-color:var(--azul)}
+
+/* ---------- nav ---------- */
+.nav{
+  position:sticky;top:0;z-index:60;background:rgba(10,59,46,.97);
+  backdrop-filter:blur(8px);border-bottom:1px solid rgba(255,255,255,.12);
+}
+.nav-in{max-width:1180px;margin:0 auto;padding:0 30px;display:flex;align-items:center;gap:22px;height:52px;overflow-x:auto}
+.nav-in::-webkit-scrollbar{display:none}
+.nav-brand{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--oliva);white-space:nowrap;font-weight:500}
+.nav a{
+  font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.06em;color:rgba(255,255,255,.72);
+  white-space:nowrap;border:0;padding:4px 0;
+}
+.nav a:hover{color:#fff;border-bottom:1px solid var(--oliva)}
+
+/* ---------- hero ---------- */
+.hero{
+  background:
+    radial-gradient(1100px 520px at 78% -8%, rgba(63,163,122,.28), transparent 62%),
+    radial-gradient(700px 400px at 6% 108%, rgba(191,47,74,.20), transparent 60%),
+    var(--mata);
+  color:#fff;padding:68px 0 0;position:relative;overflow:hidden;
+}
+.hero .eyebrow{color:var(--oliva)}
+.hero h1{font-family:'Instrument Serif',Georgia,serif;font-size:clamp(38px,6.6vw,76px);line-height:.99;margin:0 0 22px;max-width:19ch}
+.hero h1 i{font-style:italic;color:var(--oliva)}
+.hero-lead{font-size:19.5px;line-height:1.55;color:rgba(255,255,255,.84);max-width:70ch;margin-bottom:34px}
+.hero-lead b{color:#fff;font-weight:600}
+.hero-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid rgba(255,255,255,.18);margin-top:8px}
+.hstat{padding:22px 22px 26px;border-right:1px solid rgba(255,255,255,.14)}
+.hstat:last-child{border-right:0}
+.hstat .n{font-family:'Instrument Serif',Georgia,serif;font-size:40px;line-height:1;color:#fff;display:block}
+.hstat .l{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-top:8px;display:block;line-height:1.4}
+.ramp{display:flex;height:9px;width:100%;margin-top:0}
+.ramp span{flex:1}
+.ramp-legend{display:flex;gap:0;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.08em;color:rgba(255,255,255,.55);text-transform:uppercase;padding:9px 0 30px}
+.ramp-legend span{flex:1}
+
+/* ---------- seções ---------- */
+.sec{padding:74px 0;border-top:1px solid var(--linha)}
+.sec.alt{background:var(--papel-2)}
+.sec.dark{background:var(--mata);color:#fff;border-top:0}
+.sec.dark .sec-t{color:#fff}
+.sec.dark .lead{color:rgba(255,255,255,.8)}
+.sec.dark .eyebrow{color:var(--oliva)}
+.sec-head{margin-bottom:38px}
+.sec-num{
+  font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.1em;color:var(--carmim);
+  font-weight:600;display:inline-block;margin-right:12px;
+}
+
+/* ---------- grids ---------- */
+.g2{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.g-2-1{display:grid;grid-template-columns:1.55fr 1fr;gap:30px}
+
+/* ---------- cards ---------- */
+.card{background:var(--branco);border:1px solid var(--linha);border-radius:12px;padding:24px 26px;color:var(--tinta)}
+.card h3{font-size:17.5px;font-weight:600;line-height:1.28;margin:0 0 10px}
+.card p:last-child{margin-bottom:0}
+.card.lead-v{border-left:4px solid var(--folha)}
+.card.lead-a{border-left:4px solid var(--ambar)}
+.card.lead-b{border-left:4px solid var(--azul)}
+.card.lead-c{border-left:4px solid var(--carmim)}
+.card.flat{background:transparent;border:1px dashed var(--linha-2)}
+.card.dk{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.16);color:#fff}
+.card.dk h3{color:#fff}
+.card.dk p{color:rgba(255,255,255,.78)}
+
+.callout{
+  background:linear-gradient(180deg,#fff,#FFFCF4);
+  border:1px solid var(--linha-2);border-left:5px solid var(--carmim);
+  border-radius:12px;padding:26px 28px;margin:26px 0;color:var(--tinta);
+}
+.callout .k{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--carmim);font-weight:600;display:block;margin-bottom:9px}
+.callout.ok{border-left-color:var(--folha)}
+.callout.ok .k{color:var(--mata-3)}
+.callout.warn{border-left-color:var(--ambar)}
+.callout.warn .k{color:#9A6D06}
+.callout.info{border-left-color:var(--azul)}
+.callout.info .k{color:var(--azul)}
+
+/* ---------- badges ---------- */
+.bdg{
+  display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.1em;
+  text-transform:uppercase;padding:4px 9px;border-radius:4px;font-weight:600;white-space:nowrap;
+}
+.b-go{background:rgba(63,163,122,.16);color:#1B6B4C}
+.b-mid{background:rgba(223,160,30,.2);color:#8A6205}
+.b-no{background:rgba(191,47,74,.14);color:#9E1F38}
+.b-blue{background:rgba(31,111,178,.14);color:#175C96}
+.b-gray{background:rgba(19,32,27,.08);color:var(--tinta-2)}
+.chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:14px}
+.chip{
+  font-family:'IBM Plex Mono',monospace;font-size:11px;padding:4px 10px;border-radius:20px;
+  background:var(--papel-2);border:1px solid var(--linha);color:var(--tinta-2);
+}
+.sec.dark .chip{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.18);color:rgba(255,255,255,.8)}
+
+/* ---------- tabelas ---------- */
+.tbox{overflow-x:auto;border:1px solid var(--linha);border-radius:12px;background:#fff;color:var(--tinta)}
+table{width:100%;border-collapse:collapse;font-size:14.2px;min-width:560px;color:var(--tinta)}
+thead th{
+  background:var(--mata);color:#fff;text-align:left;padding:11px 14px;font-weight:500;
+  font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.11em;text-transform:uppercase;
+  position:sticky;top:0;
+}
+td{padding:10px 14px;border-top:1px solid var(--linha);vertical-align:top}
+tbody tr:nth-child(even){background:#FDFBF6}
+td.num{text-align:right;font-family:'IBM Plex Mono',monospace;font-size:13.5px}
+th.num{text-align:right}
+tr.tot td{background:var(--papel-2);font-weight:600;border-top:2px solid var(--mata)}
+td b{font-weight:600}
+
+/* ---------- barras ---------- */
+.bars{display:flex;flex-direction:column;gap:9px;margin-top:4px}
+.brow{display:grid;grid-template-columns:150px 1fr 78px;align-items:center;gap:12px}
+.brow .bname{font-size:13.5px;text-align:right;color:var(--tinta-2);line-height:1.2}
+.brow .btrack{background:var(--papel-2);border-radius:3px;height:19px;overflow:hidden;border:1px solid var(--linha)}
+.brow .bfill{height:100%;border-radius:2px 0 0 2px;display:block}
+.brow .bval{font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:var(--tinta-2)}
+.brow.hi .bname{color:var(--tinta);font-weight:600}
+
+/* ---------- escada de pixel (assinatura) ---------- */
+.ladder{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:10px}
+.lad{background:#fff;border:1px solid var(--linha);border-radius:12px;padding:16px;text-align:center}
+.lad svg{width:100%;height:auto;display:block;border-radius:6px;overflow:hidden}
+.lad .lt{font-weight:600;font-size:15px;margin-top:12px}
+.lad .lm{font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:var(--tinta-3);letter-spacing:.06em;margin-top:3px}
+.lad .lp{font-size:13px;color:var(--tinta-2);margin-top:9px;line-height:1.45}
+.lad .lv{margin-top:12px}
+
+/* ---------- fluxo de camadas ---------- */
+.layers{display:flex;flex-direction:column;gap:16px}
+.layer{
+  display:grid;grid-template-columns:78px 1fr;gap:22px;background:#fff;border:1px solid var(--linha);
+  border-radius:12px;overflow:hidden;color:var(--tinta);
+}
+.layer .lnum{
+  display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;padding:18px 8px;text-align:center;
+}
+.layer .lnum b{font-family:'Instrument Serif',Georgia,serif;font-size:30px;font-weight:400;line-height:1}
+.layer .lnum span{font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.1em;margin-top:6px;text-transform:uppercase;opacity:.85}
+.layer .lbody{padding:20px 26px 22px 0}
+.l-solo .lnum{background:var(--mata-3)}
+.l-drone .lnum{background:var(--ambar)}
+.l-sat .lnum{background:var(--azul)}
+.l-mod .lnum{background:var(--carmim)}
+
+/* ---------- timeline ---------- */
+.tl{position:relative;padding-left:26px;margin-top:8px}
+.tl:before{content:'';position:absolute;left:6px;top:6px;bottom:6px;width:2px;background:var(--linha-2)}
+.tli{position:relative;padding:0 0 26px 8px}
+.tli:before{content:'';position:absolute;left:-26px;top:5px;width:13px;height:13px;border-radius:50%;background:var(--carmim);border:3px solid var(--papel)}
+.tli .th{font-weight:600;font-size:16.5px}
+.tli .td{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.11em;text-transform:uppercase;color:var(--carmim);margin-bottom:3px}
+.tli .tdel{margin-top:8px;font-size:13.5px;color:var(--mata-3);font-weight:600}
+
+/* ---------- gantt piloto ---------- */
+.gantt{border:1px solid var(--linha);border-radius:12px;overflow:hidden;background:#fff;font-size:13.5px;color:var(--tinta)}
+.grow{display:grid;grid-template-columns:210px 1fr;border-top:1px solid var(--linha)}
+.grow:first-child{border-top:0}
+.grow .gl{padding:11px 14px;border-right:1px solid var(--linha);line-height:1.3}
+.grow .gt{display:grid;grid-template-columns:repeat(20,1fr);align-items:center;padding:6px 8px;gap:2px}
+.gbar{height:15px;border-radius:3px}
+.ghead{background:var(--mata);color:#fff}
+.ghead .gl{border-right-color:rgba(255,255,255,.2);font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase}
+.ghead .gt{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.05em;color:rgba(255,255,255,.8);text-align:center;padding:9px 8px}
+
+/* ---------- listas ---------- */
+ul.tick,ul.cross,ul.plain{list-style:none;padding:0;margin:0}
+ul.tick li,ul.cross li,ul.plain li{position:relative;padding-left:24px;margin-bottom:10px;font-size:15px;line-height:1.5}
+ul.tick li:before{content:'●';position:absolute;left:2px;top:0;color:var(--folha);font-size:11px;line-height:1.7}
+ul.cross li:before{content:'✕';position:absolute;left:2px;top:0;color:var(--carmim);font-size:12px;line-height:1.4;font-weight:700}
+ul.plain li:before{content:'—';position:absolute;left:0;top:0;color:var(--tinta-3)}
+ol.steps{padding-left:0;counter-reset:s;list-style:none;margin:0}
+ol.steps li{position:relative;padding-left:38px;margin-bottom:14px;counter-increment:s;font-size:15px;line-height:1.5}
+ol.steps li:before{
+  content:counter(s,decimal-leading-zero);position:absolute;left:0;top:1px;
+  font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--carmim);font-weight:600;
+  border:1px solid var(--linha-2);border-radius:4px;padding:2px 6px;background:#fff;
+}
+
+/* ---------- KPI ---------- */
+.kpi{background:#fff;border:1px solid var(--linha);border-radius:12px;padding:20px 22px;border-top:4px solid var(--folha);color:var(--tinta)}
+.kpi .kn{font-family:'Instrument Serif',Georgia,serif;font-size:38px;line-height:1;color:var(--mata)}
+.kpi .kl{font-size:13.5px;color:var(--tinta-2);margin-top:8px;line-height:1.4}
+.kpi.a{border-top-color:var(--ambar)}
+.kpi.b{border-top-color:var(--azul)}
+.kpi.c{border-top-color:var(--carmim)}
+
+/* ---------- rodapé ---------- */
+.foot{background:var(--mata);color:rgba(255,255,255,.7);padding:52px 0 60px;font-size:14px}
+.foot h4{font-family:'Instrument Serif',Georgia,serif;font-size:26px;color:#fff;margin-bottom:14px}
+.foot a{color:var(--oliva);border-bottom-color:rgba(150,185,60,.35)}
+.foot .g3{gap:34px}
+.foot .tiny{color:rgba(255,255,255,.45)}
+
+hr.rule{border:0;border-top:1px solid var(--linha);margin:34px 0}
+.mt0{margin-top:0}.mb0{margin-bottom:0}
+.sp24{height:24px}.sp34{height:34px}
+
+/* ---------- responsivo ---------- */
+@media (max-width:960px){
+  .g3,.g4,.ladder{grid-template-columns:repeat(2,1fr)}
+  .g-2-1{grid-template-columns:1fr}
+  .hero-grid{grid-template-columns:repeat(2,1fr)}
+  .hstat{border-bottom:1px solid rgba(255,255,255,.14)}
+  .hstat:nth-child(2){border-right:0}
+}
+@media (max-width:680px){
+  body{font-size:16px}
+  .wrap{padding:0 20px}
+  .g2,.g3,.g4,.ladder{grid-template-columns:1fr}
+  .brow{grid-template-columns:110px 1fr 62px;gap:8px}
+  .brow .bname{font-size:12px}
+  .layer{grid-template-columns:1fr}
+  .layer .lnum{flex-direction:row;gap:10px;padding:10px}
+  .layer .lbody{padding:18px 20px 20px}
+  .grow{grid-template-columns:1fr}
+  .grow .gl{border-right:0;border-bottom:1px solid var(--linha)}
+  .sec{padding:54px 0}
+}
+@media print{
+  .nav{display:none}
+  body{font-size:11pt;background:#fff}
+  .sec{padding:26px 0;page-break-inside:avoid}
+  .hero{padding-top:24px}
+  .card,.callout,.tbox,.lad,.layer{page-break-inside:avoid}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-in">
+    <span class="nav-brand">Cravo · Baixo Sul · BA</span>
+    <a href="#decisao">Decisão</a>
+    <a href="#territorio">Território</a>
+    <a href="#dificuldade">O problema</a>
+    <a href="#arquitetura">Arquitetura</a>
+    <a href="#modelos">Modelos de IA</a>
+    <a href="#app">App</a>
+    <a href="#geo">Geolocalização</a>
+    <a href="#preditivo">Predição</a>
+    <a href="#piloto">Piloto Valença</a>
+    <a href="#mundo">Referências</a>
+    <a href="#roteiro">Roteiro</a>
+    <a href="#riscos">Riscos</a>
+  </div>
+</nav>
+
+<!-- ====================== HERO ====================== -->
+<header class="hero">
+  <div class="wrap">
+    <span class="eyebrow">Relatório executivo consolidado · Julho 2026 · v1</span>
+    <h1>A doença não está no pixel.<br>Está na <i>sequência</i>.</h1>
+    <p class="hero-lead">
+      Consolidação de cinco estudos técnicos e da base censitária do IBGE para o mapeamento da
+      <b>morte súbita do craveiro</b> (<em class="sci">Cytospora eugeniae</em> em <em class="sci">Syzygium aromaticum</em>)
+      no Baixo Sul da Bahia. A resposta ao seu dilema não é escolher entre drone, satélite ou rede neural:
+      é <b>encadear as três escalas</b> e entregar, no topo, um <b>modelo de risco por talhão</b> que caiba
+      na agenda semanal de um técnico de campo. Este documento também especifica o
+      <b>piloto de 10 propriedades em Valença</b> como primeiro passo executável.
+    </p>
+    <div class="hero-grid">
+      <div class="hstat"><span class="n">3.539</span><span class="l">estabelecimentos rurais com cravo<br>IBGE · Censo 2017</span></div>
+      <div class="hstat"><span class="n">5.168 ha</span><span class="l">área colhida total<br>média de 1,46 ha por produtor</span></div>
+      <div class="hstat"><span class="n">22</span><span class="l">municípios produtores<br>8 concentram 94% da área</span></div>
+      <div class="hstat"><span class="n">R$ 23,2 mi</span><span class="l">valor da produção de cravo<br>IBGE · Censo 2017 · 626 mil pés</span></div>
+    </div>
+    <div class="ramp">
+      <span style="background:#3FA37A"></span>
+      <span style="background:#96B93C"></span>
+      <span style="background:#DFA01E"></span>
+      <span style="background:#BF2F4A"></span>
+      <span style="background:#5E3218"></span>
+    </div>
+    <div class="ramp-legend">
+      <span>0 · sadia</span><span>1 · cancro</span><span>2 · seca &lt;25%</span><span>3 · copa 25–75%</span><span>4 · morta</span>
+    </div>
+  </div>
+</header>
+
+<!-- ====================== 01 DECISÃO ====================== -->
+<section class="sec" id="decisao">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Página do decisor</span>
+      <h2 class="sec-t"><span class="sec-num">01</span>Veredito sobre as três hipóteses</h2>
+      <p class="lead">
+        As três alternativas levantadas na consulta original foram avaliadas contra a realidade física do território.
+        Nenhuma resolve o problema sozinha — e a ordem em que elas entram no projeto importa mais do que a escolha entre elas.
+      </p>
+    </div>
+
+    <div class="g3">
+      <div class="card lead-a">
+        <span class="bdg b-mid">Parcialmente · instrumento de rótulo</span>
+        <h3 style="margin-top:12px">Drone multiespectral para NDVI</h3>
+        <p class="small">
+          Insuficiente como estratégia isolada e <strong>errado no índice</strong>: NDVI satura em dossel denso e só cai
+          quando a copa já colapsou. O drone é indispensável, mas como <strong>fonte de verdade de campo em escala de copa</strong> —
+          usando red-edge (NDRE, CIre), CHM fotogramétrico e, se houver verba, térmico (CWSI).
+        </p>
+        <p class="small mb0">
+          Cobrir 5.168 ha fragmentados a 5 cm/pixel exigiria da ordem de 140–270 dias-campo por ano. Cobrir 8–12% em
+          amostragem estratificada exige 20–35 dias e gera o que o satélite não tem: <strong>rótulo por árvore</strong>.
+        </p>
+      </div>
+      <div class="card lead-b">
+        <span class="bdg b-no">Não como detector</span>
+        <h3 style="margin-top:12px">Satélite Sentinel-2 (10 m)</h3>
+        <p class="small">
+          Uma copa adulta tem 20–50 m²; um pixel Sentinel-2 tem 100 m². A árvore doente ocupa menos de um terço do pixel,
+          misturada com Mata Atlântica, cacau e banana. Some-se a isso a nebulosidade do Baixo Sul.
+          <strong>Não serve como detector de foco novo.</strong>
+        </p>
+        <p class="small mb0">
+          Serve — e muito — para <strong>estratificar risco</strong>, construir histórico de mortalidade e alimentar variáveis
+          ambientais. Para trabalhar por copa individual, é preciso subir para <strong>3 m (PlanetScope)</strong>;
+          Sentinel-1 (SAR) entra como seguro contra nuvem.
+        </p>
+      </div>
+      <div class="card lead-v">
+        <span class="bdg b-go">Aposta mais forte</span>
+        <h3 style="margin-top:12px">Rede neural supervisionada + app</h3>
+        <p class="small">
+          É a única camada capaz de <strong>detecção realmente precoce</strong>, porque enxerga tronco e ramo — onde o cancro
+          de <em class="sci">Cytospora</em> aparece antes de qualquer alteração de dossel. Nenhum sensor orbital vê um cancro
+          de tronco sob dossel; um produtor a dois metros vê.
+        </p>
+        <p class="small mb0">
+          Condições inegociáveis: inferência <strong>offline</strong> no aparelho, protocolo de três fotos
+          (tronco, ramo, copa), <strong>sete classes</strong> em vez de duas, confiança calibrada e
+          confirmação laboratorial de um subconjunto.
+        </p>
+      </div>
+    </div>
+
+    <div class="callout">
+      <span class="k">A recomendação em uma frase</span>
+      <p style="font-size:18.5px;line-height:1.5;margin-bottom:12px">
+        Construa uma <strong>cadeia de sensores em quatro escalas</strong> — produtor, drone, órbita e modelo —
+        calibrada num núcleo pequeno de propriedades e extrapolada por um modelo de risco espaço-temporal.
+        O entregável final não é um mapa de doença: é uma <strong>fila de visitas priorizada</strong> que caiba na
+        capacidade real da equipe de campo.
+      </p>
+      <p class="small mb0">
+        Detectar é caro; prever é o que escala. Um modelo que não cabe na agenda do técnico não muda desfecho nenhum.
+      </p>
+    </div>
+
+    <div class="g4" style="margin-top:34px">
+      <div class="kpi">
+        <div class="kn">R$ 110–190 mil</div>
+        <div class="kl">Piloto de 10 propriedades em Valença — 90 a 120 dias, com laboratório e drone. Versão enxuta com parceria institucional: R$ 70–100 mil.</div>
+      </div>
+      <div class="kpi a">
+        <div class="kn">R$ 1,35–2,0 mi</div>
+        <div class="kl">Programa completo de 18 meses: equipe, drones, rotulagem laboratorial, nuvem, app e escala regional.</div>
+      </div>
+      <div class="kpi b">
+        <div class="kn">40–60</div>
+        <div class="kl">Propriedades-sentinela necessárias para o modelo preditivo (8–12% da área). O piloto de 10 é o primeiro passo dessa rede, não a rede.</div>
+      </div>
+      <div class="kpi c">
+        <div class="kn">2 safras</div>
+        <div class="kl">Horizonte mínimo de observação para que o modelo de risco por talhão seja honesto. Antes disso, entrega-se suscetibilidade, não predição.</div>
+      </div>
+    </div>
+
+    <div class="sp34"></div>
+
+    <h3 class="sub-t">As sete decisões que estruturam o projeto</h3>
+    <div class="tbox">
+      <table>
+        <thead>
+          <tr><th style="width:26%">Decisão</th><th style="width:37%">Recomendação</th><th>Por quê</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><b>Unidade de análise</b></td>
+            <td>Talhão (0,2–2 ha), não propriedade nem pixel</td>
+            <td>É a unidade de manejo real e a única em que a decisão do produtor acontece. A árvore é a unidade de rótulo; o talhão é a de decisão.</td>
+          </tr>
+          <tr>
+            <td><b>Índice espectral principal</b></td>
+            <td>NDRE e CIre (red-edge), não NDVI</td>
+            <td>NDVI satura em dossel denso e responde tarde. O sinal útil de estresse está na borda do vermelho.</td>
+          </tr>
+          <tr>
+            <td><b>Número de classes do modelo</b></td>
+            <td>Sete, incluindo confundidores</td>
+            <td>Sadia, cancro/exsudação, seca descendente, erva-de-passarinho, cochonilha/fumagina, dano por Ethrel, outro estresse. Binário sadio/doente aprende "árvore feia".</td>
+          </tr>
+          <tr>
+            <td><b>Métrica de sucesso</b></td>
+            <td>Recall da classe doente e PR-AUC — nunca acurácia</td>
+            <td>Com incidência baixa, um modelo que responde "sadia" sempre acerta mais de 95%. Acurácia global é ruído travestido de resultado.</td>
+          </tr>
+          <tr>
+            <td><b>Validação</b></td>
+            <td>Por propriedade inteira, com hold-out de municípios</td>
+            <td>Árvores vizinhas são quase idênticas. Divisão aleatória entrega 0,95 na validação e 0,62 em campo.</td>
+          </tr>
+          <tr>
+            <td><b>Precisão de GPS no treino</b></td>
+            <td>RTK/PPK abaixo de 30 cm na rede sentinela</td>
+            <td>GPS de celular erra 3–8 m; um pixel PlanetScope tem 3 m. Metade dos rótulos apontaria para a árvore vizinha sadia.</td>
+          </tr>
+          <tr>
+            <td><b>Primeiro componente a construir</b></td>
+            <td>Banco PostGIS + cadastro CAR + protocolo + fila de revisão</td>
+            <td>É a fundação, custa pouco e sobrevive a qualquer troca de arquitetura de modelo. É a única parte que não se compra pronta depois.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== 02 TERRITÓRIO ====================== -->
+<section class="sec alt" id="territorio">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Base censitária IBGE 2017 · planilha anexa</span>
+      <h2 class="sec-t"><span class="sec-num">02</span>O território em números — e a correção da base</h2>
+      <p class="lead">
+        A planilha do Censo Agropecuário muda três premissas que circulavam nos estudos anteriores e
+        redesenha a prioridade geográfica do programa.
+      </p>
+    </div>
+
+    <div class="g3" style="margin-bottom:30px">
+      <div class="card lead-c">
+        <span class="tiny">Premissa anterior → base real</span>
+        <h3 style="margin-top:10px">22 municípios</h3>
+        <p class="small mb0">São 22 municípios baianos com produção registrada de cravo: 13 no Baixo Sul, 6 no Litoral Sul e 3 no Vale do Jiquiriçá em um raio de 150 km</p>
+      </div>
+      <div class="card lead-c">
+        <span class="tiny">Premissa anterior → base real</span>
+        <h3 style="margin-top:10px">5.168 ha colhidos</h3>
+        <p class="small mb0">A área <em>colhida</em> censitária soma 5.168 ha. Já a área <em>com craveiros</em> (plantada) chega a cerca de 6.300 ha só no Baixo Sul. A divergência de mais de 20% entre as duas séries é, por si só, um argumento para o programa construir sua própria base cadastral mapeada.</p>
+      </div>
+      <div class="card lead-c">
+        <span class="tiny">Premissa anterior → base real</span>
+        <h3 style="margin-top:10px">3.539 estabelecimentos</h3>
+        <p class="small mb0">Média de <strong>1,46 ha por estabelecimento</strong>. Uma propriedade média cabe em cerca de 146 pixels do Sentinel-2 — dos quais a maioria é pixel de borda, contaminado por mata e por outras culturas do consórcio.</p>
+      </div>
+    </div>
+
+    <div class="g-2-1">
+      <div>
+        <h3 class="sub-t">Área colhida por município (ha)</h3>
+        <p class="small" style="margin-bottom:18px">Escala relativa a Valença. Em destaque, os seis municípios que somam 90,2% da área.</p>
+        <div class="bars">
+          <div class="brow hi"><span class="bname">Valença</span><span class="btrack"><span class="bfill" style="width:100%;background:linear-gradient(90deg,#0A3B2E,#1B7355)"></span></span><span class="bval">1.958</span></div>
+          <div class="brow hi"><span class="bname">Camamu</span><span class="btrack"><span class="bfill" style="width:46.5%;background:linear-gradient(90deg,#0A3B2E,#1B7355)"></span></span><span class="bval">910</span></div>
+          <div class="brow hi"><span class="bname">Taperoá</span><span class="btrack"><span class="bfill" style="width:35.5%;background:linear-gradient(90deg,#0A3B2E,#1B7355)"></span></span><span class="bval">695</span></div>
+          <div class="brow hi"><span class="bname">Igrapiúna</span><span class="btrack"><span class="bfill" style="width:19.6%;background:linear-gradient(90deg,#0A3B2E,#1B7355)"></span></span><span class="bval">384</span></div>
+          <div class="brow hi"><span class="bname">Ituberá</span><span class="btrack"><span class="bfill" style="width:18.6%;background:linear-gradient(90deg,#0A3B2E,#1B7355)"></span></span><span class="bval">364</span></div>
+          <div class="brow hi"><span class="bname">Pres. Tancredo Neves</span><span class="btrack"><span class="bfill" style="width:17.9%;background:linear-gradient(90deg,#0A3B2E,#1B7355)"></span></span><span class="bval">350</span></div>
+          <div class="brow"><span class="bname">Nilo Peçanha</span><span class="btrack"><span class="bfill" style="width:5.3%;background:#3FA37A"></span></span><span class="bval">104</span></div>
+          <div class="brow"><span class="bname">Piraí do Norte</span><span class="btrack"><span class="bfill" style="width:5.3%;background:#3FA37A"></span></span><span class="bval">104</span></div>
+          <div class="brow"><span class="bname">Teolândia</span><span class="btrack"><span class="bfill" style="width:4.2%;background:#3FA37A"></span></span><span class="bval">83</span></div>
+          <div class="brow"><span class="bname">Mutuípe</span><span class="btrack"><span class="bfill" style="width:3.3%;background:#3FA37A"></span></span><span class="bval">65</span></div>
+          <div class="brow"><span class="bname">Maraú</span><span class="btrack"><span class="bfill" style="width:1.5%;background:#96B93C"></span></span><span class="bval">29</span></div>
+          <div class="brow"><span class="bname">Jaguaripe</span><span class="btrack"><span class="bfill" style="width:1.4%;background:#96B93C"></span></span><span class="bval">27</span></div>
+          <div class="brow"><span class="bname">Wenceslau Guim.</span><span class="btrack"><span class="bfill" style="width:1.1%;background:#96B93C"></span></span><span class="bval">21</span></div>
+          <div class="brow"><span class="bname">Itacaré</span><span class="btrack"><span class="bfill" style="width:1.0%;background:#96B93C"></span></span><span class="bval">20</span></div>
+          <div class="brow"><span class="bname">Ibirapitanga</span><span class="btrack"><span class="bfill" style="width:0.9%;background:#96B93C"></span></span><span class="bval">17</span></div>
+          <div class="brow"><span class="bname">Outros 7 municípios</span><span class="btrack"><span class="bfill" style="width:1.9%;background:#CFC4AE"></span></span><span class="bval">37</span></div>
+        </div>
+      </div>
+      <div>
+        <div class="callout warn" style="margin-top:0">
+          <span class="k">Achado que muda o desenho amostral</span>
+          <p class="small" style="margin-bottom:12px">
+            <strong>Camamu é o segundo maior município produtor em área</strong> — 910 ha, 17,6% do total. Sozinho, tem quase o dobro da área de Ituberá e Nilo Peçanha somados.
+          </p>
+          <p class="small mb0">
+            Também tem a <strong>maior área média por estabelecimento da região (2,77 ha)</strong>, quase o dobro da média regional.
+            São propriedades relativamente maiores e mais homogêneas — as mais fáceis de mapear por sensor remoto e, portanto,
+            o melhor laboratório para testar a camada orbital.
+          </p>
+        </div>
+        <div class="card flat">
+          <span class="tiny">Cobertura da amostragem</span>
+          <p class="small" style="margin:10px 0 0">
+            Os 4 municípios citados na consulta (Valença, Taperoá, Ituberá, Nilo Peçanha) cobrem <strong>60,4%</strong> da área.
+            Acrescentando <strong>Camamu, Igrapiúna e Presidente Tancredo Neves</strong> — apenas três municípios a mais —
+            a cobertura sobe para <strong>92,2%</strong> da área e 83,5% dos produtores.
+          </p>
+          <p class="small mb0" style="margin-top:12px">
+            Recomendação: <strong>desenhe o programa sobre 7 municípios</strong>, não sobre 22 nem sobre 4.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="sp34"></div>
+
+    <div class="g3">
+      <div class="kpi"><div class="kn">1,46 ha</div><div class="kl">Área colhida média por estabelecimento em toda a região. Mediana municipal ainda menor.</div></div>
+      <div class="kpi a"><div class="kn">94,2%</div><div class="kl">Da área concentrada em apenas 8 municípios — o que torna a vigilância regional operacionalmente viável.</div></div>
+      <div class="kpi c"><div class="kn">0,32 ha</div><div class="kl">Menor área média (Gandu). Nesses municípios, o cravo é cultura de fundo de quintal em consórcio — invisível a qualquer sensor de média resolução.</div></div>
+    </div>
+
+    <div class="sp34"></div>
+
+    <h3 class="sub-t">Base completa — 22 municípios</h3>
+    <p class="small" style="margin-bottom:16px">
+      Ordenada por área colhida. A coluna de acumulado mostra onde o programa atinge cobertura suficiente para cada meta de abrangência.
+    </p>
+    <div class="tbox">
+      <table>
+        <thead>
+          <tr>
+            <th style="width:30px">#</th><th>Município</th>
+            <th class="num">Estabelec.</th><th class="num">% prod.</th>
+            <th class="num">Área (ha)</th><th class="num">% área</th>
+            <th class="num">Acum. área</th><th class="num">Média ha</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td><b>Valença</b></td><td class="num">1.132</td><td class="num">32,0%</td><td class="num">1.958</td><td class="num">37,9%</td><td class="num">37,9%</td><td class="num">1,73</td></tr>
+          <tr><td>2</td><td><b>Camamu</b></td><td class="num">328</td><td class="num">9,3%</td><td class="num">910</td><td class="num">17,6%</td><td class="num">55,5%</td><td class="num">2,77</td></tr>
+          <tr><td>3</td><td><b>Taperoá</b></td><td class="num">450</td><td class="num">12,7%</td><td class="num">695</td><td class="num">13,4%</td><td class="num">68,9%</td><td class="num">1,54</td></tr>
+          <tr><td>4</td><td><b>Igrapiúna</b></td><td class="num">241</td><td class="num">6,8%</td><td class="num">384</td><td class="num">7,4%</td><td class="num">76,4%</td><td class="num">1,59</td></tr>
+          <tr><td>5</td><td><b>Ituberá</b></td><td class="num">267</td><td class="num">7,5%</td><td class="num">364</td><td class="num">7,0%</td><td class="num">83,4%</td><td class="num">1,36</td></tr>
+          <tr><td>6</td><td><b>Pres. Tancredo Neves</b></td><td class="num">415</td><td class="num">11,7%</td><td class="num">350</td><td class="num">6,8%</td><td class="num">90,2%</td><td class="num">0,84</td></tr>
+          <tr><td>7</td><td><b>Nilo Peçanha</b></td><td class="num">121</td><td class="num">3,4%</td><td class="num">104</td><td class="num">2,0%</td><td class="num">92,2%</td><td class="num">0,86</td></tr>
+          <tr><td>8</td><td>Piraí do Norte</td><td class="num">140</td><td class="num">4,0%</td><td class="num">104</td><td class="num">2,0%</td><td class="num">94,2%</td><td class="num">0,74</td></tr>
+          <tr><td>9</td><td>Teolândia</td><td class="num">93</td><td class="num">2,6%</td><td class="num">83</td><td class="num">1,6%</td><td class="num">95,8%</td><td class="num">0,89</td></tr>
+          <tr><td>10</td><td>Mutuípe</td><td class="num">113</td><td class="num">3,2%</td><td class="num">65</td><td class="num">1,3%</td><td class="num">97,1%</td><td class="num">0,58</td></tr>
+          <tr><td>11</td><td>Maraú</td><td class="num">67</td><td class="num">1,9%</td><td class="num">29</td><td class="num">0,6%</td><td class="num">97,6%</td><td class="num">0,43</td></tr>
+          <tr><td>12</td><td>Jaguaripe</td><td class="num">15</td><td class="num">0,4%</td><td class="num">27</td><td class="num">0,5%</td><td class="num">98,2%</td><td class="num">1,80</td></tr>
+          <tr><td>13</td><td>Wenceslau Guimarães</td><td class="num">56</td><td class="num">1,6%</td><td class="num">21</td><td class="num">0,4%</td><td class="num">98,6%</td><td class="num">0,38</td></tr>
+          <tr><td>14</td><td>Itacaré</td><td class="num">15</td><td class="num">0,4%</td><td class="num">20</td><td class="num">0,4%</td><td class="num">98,9%</td><td class="num">1,33</td></tr>
+          <tr><td>15</td><td>Ibirapitanga</td><td class="num">31</td><td class="num">0,9%</td><td class="num">17</td><td class="num">0,3%</td><td class="num">99,3%</td><td class="num">0,55</td></tr>
+          <tr><td>16</td><td>Ubatã</td><td class="num">5</td><td class="num">0,1%</td><td class="num">10</td><td class="num">0,2%</td><td class="num">99,5%</td><td class="num">2,00</td></tr>
+          <tr><td>17</td><td>Una</td><td class="num">11</td><td class="num">0,3%</td><td class="num">10</td><td class="num">0,2%</td><td class="num">99,7%</td><td class="num">0,91</td></tr>
+          <tr><td>18</td><td>Gandu</td><td class="num">19</td><td class="num">0,5%</td><td class="num">6</td><td class="num">0,1%</td><td class="num">99,8%</td><td class="num">0,32</td></tr>
+          <tr><td>19</td><td>Ilhéus</td><td class="num">4</td><td class="num">0,1%</td><td class="num">3</td><td class="num">0,1%</td><td class="num">99,9%</td><td class="num">0,75</td></tr>
+          <tr><td>20</td><td>Laje</td><td class="num">4</td><td class="num">0,1%</td><td class="num">3</td><td class="num">0,1%</td><td class="num">99,9%</td><td class="num">0,75</td></tr>
+          <tr><td>21</td><td>Nova Ibiá</td><td class="num">8</td><td class="num">0,2%</td><td class="num">3</td><td class="num">0,1%</td><td class="num">100,0%</td><td class="num">0,38</td></tr>
+          <tr><td>22</td><td>Jiquiriçá</td><td class="num">4</td><td class="num">0,1%</td><td class="num">2</td><td class="num">0,0%</td><td class="num">100,0%</td><td class="num">0,50</td></tr>
+          <tr class="tot"><td></td><td><b>Total</b></td><td class="num">3.539</td><td class="num">100%</td><td class="num">5.168</td><td class="num">100%</td><td class="num">—</td><td class="num">1,46</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="tiny" style="margin-top:12px">
+      Fonte: IBGE, Censo Agropecuário 2017 — resultados definitivos (planilha anexa, área colhida).
+      Séries paralelas do mesmo censo registram "área com craveiros" superior à área colhida em vários municípios;
+      o programa deve adotar a área plantada mapeada como base operacional.
+    </p>
+
+    <div class="callout">
+      <span class="k">Correção da leitura econômica — refeita sobre o Censo 2017</span>
+      <p class="small" style="margin-bottom:14px">
+        A versão anterior deste relatório usava os <strong>R$ 250 milhões</strong> citados pela imprensa setorial como se fossem
+        valor da produção. <strong>Não são.</strong> Esse número descreve a <em>movimentação da cadeia</em> — inclui
+        intermediação, beneficiamento e exportação. O valor da produção agrícola registrado pelo Censo Agropecuário 2017 é
+        <strong>R$ 23,157 milhões</strong>, cerca de <strong>onze vezes menor</strong>. Toda a análise de retorno abaixo foi
+        recalculada sobre o dado censitário, que é o auditável.
+      </p>
+      <div class="tbox" style="margin:0 0 16px">
+        <table style="min-width:480px">
+          <thead><tr><th>Indicador</th><th class="num">Valor</th><th>Derivação</th></tr></thead>
+          <tbody>
+            <tr><td>Valor da produção (2017)</td><td class="num"><b>R$ 23,157 mi</b></td><td>Censo Agropecuário IBGE, 22 municípios</td></tr>
+            <tr><td>Pés de craveiro existentes</td><td class="num"><b>626 mil</b></td><td>Censo Agropecuário IBGE</td></tr>
+            <tr><td>Densidade média de plantio</td><td class="num">121 pés/ha</td><td>626.000 ÷ 5.168 ha</td></tr>
+            <tr><td>Valor por hectare por ano</td><td class="num"><b>R$ 4.481</b></td><td>R$ 23,157 mi ÷ 5.168 ha</td></tr>
+            <tr><td>Valor por pé por ano</td><td class="num">R$ 37</td><td>R$ 23,157 mi ÷ 626.000 pés</td></tr>
+            <tr><td>Pés por estabelecimento</td><td class="num">177</td><td>626.000 ÷ 3.539 estabelecimentos</td></tr>
+            <tr class="tot"><td><b>Valor por produtor por ano</b></td><td class="num"><b>R$ 6.543</b></td><td>R$ 23,157 mi ÷ 3.539 estabelecimentos</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="small mb0">
+        O último número é o que define o desenho social do projeto: a renda anual média do cravo por estabelecimento, a preços
+        de 2017, é da ordem de <strong>R$ 6,5 mil</strong>. Não existe margem para o produtor comprar tecnologia, pagar assinatura
+        de aplicativo ou custear inspeção. <strong>Qualquer solução aqui é necessariamente pública, cooperativa ou subsidiada</strong> —
+        e o app precisa devolver valor imediato para justificar até o custo do tempo de quem tira a foto.
+      </p>
+    </div>
+
+    <div class="g2" style="margin-top:22px">
+      <div class="card lead-c">
+        <h3>A perda é de estoque, não de fluxo</h3>
+        <p class="small">
+          Uma árvore morta não custa um ano de produção: custa <strong>toda a vida produtiva restante</strong>. Um craveiro bem
+          conduzido produz por décadas, leva de 6 a 8 anos para entrar em produção e — conforme relato recorrente dos produtores —
+          não pode ser replantado no mesmo local. Avaliar o dano em base anual subestima o prejuízo em uma ordem de grandeza.
+        </p>
+        <p class="small mb0">
+          Capitalizando o fluxo perdido a taxas de desconto de 8% a 12% ao ano, cada hectare perdido em definitivo vale entre
+          <strong>R$ 37 e R$ 56 mil</strong> a preços de 2017 — ou de <strong>R$ 310 a R$ 460 por pé</strong>. É esse o número que
+          deve entrar em qualquer justificativa de investimento, não o valor anual.
+        </p>
+      </div>
+      <div class="card lead-b">
+        <h3>Ponto de equilíbrio do programa</h3>
+        <div class="tbox" style="margin:12px 0 14px">
+          <table style="min-width:420px">
+            <thead><tr><th>Investimento</th><th class="num">Área a preservar</th><th class="num">% da região</th></tr></thead>
+            <tbody>
+              <tr><td>Piloto de Valença<br><span class="tiny">R$ 110–190 mil</span></td><td class="num">2 a 5 ha</td><td class="num">0,1%</td></tr>
+              <tr><td>Programa 18 meses<br><span class="tiny">R$ 1,35–2,0 mi</span></td><td class="num">24 a 54 ha</td><td class="num">0,5–1,0%</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="small mb0">
+          O programa completo se paga se evitar a perda definitiva de menos de <strong>1% da área regional</strong> — e o piloto,
+          se evitar a perda de <strong>duas a cinco propriedades médias</strong>. A preços atuais de cravo, bem acima dos de 2017,
+          essas áreas de equilíbrio caem para aproximadamente um terço. A conclusão de viabilidade se sustenta; o que muda é
+          que a margem já não é confortável a ponto de dispensar rigor no gasto.
+        </p>
+      </div>
+    </div>
+
+    <div class="callout warn">
+      <span class="k">Três ressalvas que não devem ser omitidas da proposta</span>
+      <ul class="tick" style="margin-top:4px">
+        <li>
+          <strong>Preço.</strong> O valor censitário está a preços de 2017, quando o cravo era negociado na casa de poucas dezenas
+          de reais por quilo. Relatos regionais indicam preços muito superiores nos anos recentes. Ao atualizar, o valor por hectare
+          multiplica-se por um fator da ordem de três a quatro — <strong>apresente sempre a faixa, com o ano-base explícito</strong>,
+          e nunca misture as duas bases no mesmo cálculo.
+        </li>
+        <li>
+          <strong>Bienalidade.</strong> A cultura produz de forma alternada, e a colheita química agrava o efeito. Um único ano
+          censitário pode representar uma safra baixa. Antes de fechar qualquer número na proposta de financiamento, atualize com
+          a Produção Agrícola Municipal de pelo menos três anos consecutivos.
+        </li>
+        <li>
+          <strong>Inconsistência entre séries.</strong> Uma única empresa exportadora da região relatou volume de dois milhões de
+          quilos na safra 2024/25 — mais do que toda a produção regional registrada no censo. Ou a produção cresceu muito desde 2017,
+          ou o censo subdeclara, ou a empresa capta fora da região. <strong>Não use as duas fontes na mesma conta</strong> até que
+          essa divergência esteja resolvida; ela é, por si só, um argumento para o cadastro georreferenciado que o projeto propõe.
+        </li>
+      </ul>
+      <p class="small mb0" style="margin-top:6px">
+        Nota sobre a unidade: as 626 mil unidades foram interpretadas aqui como <strong>número de pés existentes</strong>, leitura
+        internamente consistente — 121 pés/ha converge com a densidade de referência de cerca de 100 plantas por hectare usada na
+        agronomia regional. Confirme a rubrica na tabela de origem antes de publicar.
+      </p>
+    </div>
+
+    <div class="callout info">
+      <span class="k">O que a nova base econômica revela sobre o problema</span>
+      <p class="small mb0">
+        Cruzando o valor da produção com a produção física compilada para os municípios do Baixo Sul — da ordem de 1,4 mil toneladas —
+        chega-se a um rendimento próximo de <strong>2 a 3 kg por pé</strong>, contra um potencial citado na literatura regional de
+        até <strong>30 kg por pé</strong> em plantas bem nutridas. A densidade não é o gargalo: 121 pés por hectare está na faixa
+        de referência. <strong>O gargalo é o rendimento por planta</strong>, associado a solos ácidos e pobres, ausência quase total
+        de adubação e envelhecimento dos pomares. A morte súbita é o gatilho visível de um declínio que tem forte componente
+        nutricional — razão adicional para que solo, nutrição e manejo entrem como variáveis preditivas de primeira linha, e não
+        como contexto.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== 03 DIFICULDADE ====================== -->
+<section class="sec" id="dificuldade">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Diagnóstico técnico</span>
+      <h2 class="sec-t"><span class="sec-num">03</span>Por que o satélite falha aqui — e por que isso não é culpa do satélite</h2>
+      <p class="lead">
+        Quatro obstáculos se somam. Cada um, sozinho, já derrubaria uma abordagem puramente orbital.
+        Entendê-los é o que impede o projeto de gastar orçamento na camada errada.
+      </p>
+    </div>
+
+    <div class="g4" style="margin-bottom:38px">
+      <div class="card lead-c">
+        <span class="tiny">Obstáculo 01</span>
+        <h3 style="margin-top:8px">Escala do alvo</h3>
+        <p class="small mb0">A copa de um craveiro adulto tem 5–8 m de diâmetro (20–50 m²). O pixel do Sentinel-2 tem 100 m². A árvore doente ocupa menos de um terço do pixel, misturada com mata, cacau, banana e pimenta. O sinal existe, mas está diluído abaixo do ruído.</p>
+      </div>
+      <div class="card lead-c">
+        <span class="tiny">Obstáculo 02</span>
+        <h3 style="margin-top:8px">Fisiologia do sintoma</h3>
+        <p class="small mb0"><em class="sci">Cytospora</em> produz cancro, exsudação e morte descendente de ramos. O colapso da copa é <strong>tardio e abrupto</strong> — o oposto do gradiente lento que índices de vegetação detectam bem. A janela pré-visual útil está no tronco, não no dossel.</p>
+      </div>
+      <div class="card lead-c">
+        <span class="tiny">Obstáculo 03</span>
+        <h3 style="margin-top:8px">Atmosfera</h3>
+        <p class="small mb0">O Baixo Sul é uma das regiões mais chuvosas e nubladas do país. Séries Sentinel-2 limpas ficam esparsas justamente no período crítico. Qualquer pipeline precisa de preenchimento de lacunas, fusão com SAR (Sentinel-1) e composições mensais, não decendiais.</p>
+      </div>
+      <div class="card lead-c">
+        <span class="tiny">Obstáculo 04</span>
+        <h3 style="margin-top:8px">Confusão de sintomas</h3>
+        <p class="small mb0">Copa amarelada também vem de dosagem incorreta de Ethrel, erva-de-passarinho, cochonilha, encharcamento, veranico e senescência pós-colheita. Sem verdade de campo com isolamento ou PCR, o modelo aprende "árvore feia", não <em class="sci">Cytospora</em>.</p>
+      </div>
+    </div>
+
+    <h3 class="sub-t">Uma copa de 6 m contra quatro tamanhos de pixel</h3>
+    <p class="small" style="max-width:74ch;margin-bottom:22px">
+      Mesma cena de 24 × 24 metros nos quatro painéis. O círculo vermelho é um craveiro doente; as manchas verdes são
+      vizinhos sadios e mata remanescente. A grade é o pixel do sensor.
+    </p>
+
+    <div class="ladder">
+      <!-- Sentinel-2 -->
+      <div class="lad">
+        <svg viewBox="0 0 160 160" role="img" aria-label="Cena de 24 por 24 metros com grade de pixels de 10 metros do Sentinel-2; a copa doente ocupa menos de um terço de um pixel">
+          <defs><pattern id="gA" width="66.67" height="66.67" patternUnits="userSpaceOnUse"><path d="M0 0 H66.67 V66.67" fill="none" stroke="#0A3B2E" stroke-width="1.6" opacity=".9"/></pattern></defs>
+          <rect width="160" height="160" fill="#DDE9D5"/>
+          <ellipse cx="24" cy="26" rx="26" ry="24" fill="#2E6B4E" opacity=".55"/>
+          <ellipse cx="132" cy="34" rx="30" ry="26" fill="#2E6B4E" opacity=".45"/>
+          <ellipse cx="34" cy="132" rx="24" ry="22" fill="#3FA37A" opacity=".55"/>
+          <ellipse cx="126" cy="128" rx="22" ry="21" fill="#3FA37A" opacity=".5"/>
+          <ellipse cx="80" cy="24" rx="18" ry="17" fill="#3FA37A" opacity=".45"/>
+          <circle cx="80" cy="80" r="20" fill="#BF2F4A" opacity=".95"/>
+          <circle cx="80" cy="80" r="8" fill="#5E3218"/>
+          <rect width="160" height="160" fill="url(#gA)"/>
+        </svg>
+        <div class="lt">Sentinel-2</div>
+        <div class="lm">GSD 10 m · grátis · 5 dias</div>
+        <p class="lp">A copa doente é cerca de 28% de um pixel. Vizinhas sadias e mata dominam o espectro.</p>
+        <div class="lv"><span class="bdg b-no">Detecção: não</span></div>
+      </div>
+      <!-- PlanetScope -->
+      <div class="lad">
+        <svg viewBox="0 0 160 160" role="img" aria-label="Mesma cena com grade de pixels de 3 metros do PlanetScope; a copa doente cobre cerca de quatro pixels">
+          <defs><pattern id="gB" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M0 0 H20 V20" fill="none" stroke="#0A3B2E" stroke-width="0.9" opacity=".75"/></pattern></defs>
+          <rect width="160" height="160" fill="#DDE9D5"/>
+          <ellipse cx="24" cy="26" rx="26" ry="24" fill="#2E6B4E" opacity=".55"/>
+          <ellipse cx="132" cy="34" rx="30" ry="26" fill="#2E6B4E" opacity=".45"/>
+          <ellipse cx="34" cy="132" rx="24" ry="22" fill="#3FA37A" opacity=".55"/>
+          <ellipse cx="126" cy="128" rx="22" ry="21" fill="#3FA37A" opacity=".5"/>
+          <ellipse cx="80" cy="24" rx="18" ry="17" fill="#3FA37A" opacity=".45"/>
+          <circle cx="80" cy="80" r="20" fill="#BF2F4A" opacity=".95"/>
+          <circle cx="80" cy="80" r="8" fill="#5E3218"/>
+          <rect width="160" height="160" fill="url(#gB)"/>
+        </svg>
+        <div class="lt">PlanetScope</div>
+        <div class="lm">GSD 3 m · quase diária</div>
+        <p class="lp">Três a quatro pixels puros por copa. Suficiente para série temporal por árvore e para pegar o colapso.</p>
+        <div class="lv"><span class="bdg b-mid">Detecção: tardia</span></div>
+      </div>
+      <!-- VHR -->
+      <div class="lad">
+        <svg viewBox="0 0 160 160" role="img" aria-label="Mesma cena com grade de pixels de 50 centímetros de satélite de altíssima resolução; a copa é delineável individualmente">
+          <defs><pattern id="gC" width="3.33" height="3.33" patternUnits="userSpaceOnUse"><path d="M0 0 H3.33 V3.33" fill="none" stroke="#0A3B2E" stroke-width="0.25" opacity=".55"/></pattern></defs>
+          <rect width="160" height="160" fill="#DDE9D5"/>
+          <ellipse cx="24" cy="26" rx="26" ry="24" fill="#2E6B4E" opacity=".55"/>
+          <ellipse cx="132" cy="34" rx="30" ry="26" fill="#2E6B4E" opacity=".45"/>
+          <ellipse cx="34" cy="132" rx="24" ry="22" fill="#3FA37A" opacity=".55"/>
+          <ellipse cx="126" cy="128" rx="22" ry="21" fill="#3FA37A" opacity=".5"/>
+          <ellipse cx="80" cy="24" rx="18" ry="17" fill="#3FA37A" opacity=".45"/>
+          <circle cx="80" cy="80" r="20" fill="#BF2F4A" opacity=".95"/>
+          <circle cx="80" cy="80" r="8" fill="#5E3218"/>
+          <rect width="160" height="160" fill="url(#gC)"/>
+        </svg>
+        <div class="lt">Pléiades / WorldView</div>
+        <div class="lm">GSD 0,3–0,5 m · sob demanda</div>
+        <p class="lp">Copa individual delineável. Caro por km², mas útil para auditar blocos grandes uma ou duas vezes por ano.</p>
+        <div class="lv"><span class="bdg b-mid">Detecção: média</span></div>
+      </div>
+      <!-- Drone -->
+      <div class="lad">
+        <svg viewBox="0 0 160 160" role="img" aria-label="Mesma cena vista por drone a 5 centímetros por pixel; a estrutura interna da copa e a lesão são visíveis">
+          <rect width="160" height="160" fill="#DDE9D5"/>
+          <ellipse cx="24" cy="26" rx="26" ry="24" fill="#2E6B4E" opacity=".55"/>
+          <ellipse cx="132" cy="34" rx="30" ry="26" fill="#2E6B4E" opacity=".45"/>
+          <ellipse cx="34" cy="132" rx="24" ry="22" fill="#3FA37A" opacity=".55"/>
+          <ellipse cx="126" cy="128" rx="22" ry="21" fill="#3FA37A" opacity=".5"/>
+          <ellipse cx="80" cy="24" rx="18" ry="17" fill="#3FA37A" opacity=".45"/>
+          <circle cx="80" cy="80" r="20" fill="#BF2F4A" opacity=".95"/>
+          <path d="M80 62 L80 98 M80 74 L69 66 M80 74 L91 66 M80 86 L70 92 M80 86 L91 91" stroke="#5E3218" stroke-width="2" fill="none" stroke-linecap="round"/>
+          <path d="M62 84 a18 18 0 0 0 15 14" stroke="#DFA01E" stroke-width="3" fill="none" opacity=".9"/>
+          <circle cx="80" cy="80" r="20" fill="none" stroke="#5E3218" stroke-width="1" opacity=".5" stroke-dasharray="3 3"/>
+        </svg>
+        <div class="lt">Drone multiespectral</div>
+        <div class="lm">GSD 3–7 cm · sob demanda</div>
+        <p class="lp">Cerca de 10.000 pixels por copa, red-edge disponível e modelo de altura por fotogrametria. A grade seria mais fina que o traço desta ilustração.</p>
+        <div class="lv"><span class="bdg b-go">Detecção: sim</span></div>
+      </div>
+    </div>
+
+    <div class="callout ok">
+      <span class="k">Leitura correta da escada</span>
+      <p class="small mb0">
+        O drone é o <strong>instrumento de calibração e rótulo</strong>, não o instrumento de cobertura.
+        O satélite é o instrumento de cobertura, não de detecção. O produtor é o instrumento de detecção precoce.
+        Quem inverte esses papéis gasta dez vezes mais para chegar a um resultado pior.
+      </p>
+    </div>
+
+    <div class="sp34"></div>
+
+    <div class="g-2-1">
+      <div>
+        <h3 class="sub-t">O insight local que vale o projeto: use a floração para separar o craveiro da mata</h3>
+        <p>
+          O maior problema não é detectar a doença — é saber <strong>onde está cada craveiro</strong> num mosaico de sistema
+          agroflorestal e floresta. A solução não é espectral, é <strong>fenológica</strong>: o botão floral do craveiro passa
+          de verde-pálido a róseo-avermelhado antes da colheita, entre novembro e dezembro na Bahia. Nessa janela,
+          a assinatura do dossel do craveiro se descola da mata circundante numa série PlanetScope.
+        </p>
+        <p class="mb0">
+          Empilhe 8 a 12 datas do ciclo e <strong>classifique a trajetória</strong>, não a imagem única. É a diferença entre
+          um mapa de "vegetação arbórea" e um mapa de craveiros.
+        </p>
+      </div>
+      <div>
+        <div class="callout warn" style="margin-top:0">
+          <span class="k">O confundidor número 1</span>
+          <p class="small mb0">
+            A aplicação de <strong>Ethrel</strong> para uniformizar a colheita altera o dossel de forma sistemática e é
+            apontada pelo próprio setor como fator de enfraquecimento das plantas. Registre <strong>data e dose por talhão</strong>.
+            Sem isso, o modelo confunde "colheita química" com "declínio por <em class="sci">Cytospora</em>" — e esse é o erro
+            mais provável do projeto inteiro.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="sp24"></div>
+    <h4 class="tiny" style="letter-spacing:.16em;margin-bottom:10px">CALENDÁRIO OPERACIONAL</h4>
+    <div style="display:grid;grid-template-columns:repeat(12,1fr);gap:3px;font-family:'IBM Plex Mono',monospace;font-size:10px;text-align:center">
+      <div style="background:#E8EEE4;padding:7px 2px;border-radius:3px 0 0 3px">JAN</div>
+      <div style="background:#E8EEE4;padding:7px 2px">FEV</div>
+      <div style="background:#E8EEE4;padding:7px 2px">MAR</div>
+      <div style="background:#E8EEE4;padding:7px 2px">ABR</div>
+      <div style="background:#E8EEE4;padding:7px 2px">MAI</div>
+      <div style="background:#E8EEE4;padding:7px 2px">JUN</div>
+      <div style="background:#E8EEE4;padding:7px 2px">JUL</div>
+      <div style="background:#E8EEE4;padding:7px 2px">AGO</div>
+      <div style="background:#DFA01E;color:#fff;padding:7px 2px">SET</div>
+      <div style="background:#DFA01E;color:#fff;padding:7px 2px">OUT</div>
+      <div style="background:#BF2F4A;color:#fff;padding:7px 2px">NOV</div>
+      <div style="background:#BF2F4A;color:#fff;padding:7px 2px;border-radius:0 3px 3px 0">DEZ</div>
+    </div>
+    <div class="g3" style="margin-top:14px">
+      <p class="small mb0"><span class="bdg b-mid">Set–Out</span><br>Melhor janela de voo: menos nuvem, dossel estável, pré-colheita.</p>
+      <p class="small mb0"><span class="bdg b-no">Nov–Dez</span><br>Janela fenológica de mapeamento: floração e colheita separam craveiro da mata.</p>
+      <p class="small mb0"><span class="bdg b-gray">Jan–Ago</span><br>Monitoramento orbital passivo e coleta contínua pelo app.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== 04 ARQUITETURA ====================== -->
+<section class="sec dark" id="arquitetura">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Recomendação central</span>
+      <h2 class="sec-t"><span class="sec-num" style="color:#96B93C">04</span>Quatro camadas, cada uma resolvendo o que a outra não resolve</h2>
+      <p class="lead">
+        Esta é a resposta direta à pergunta original: não escolha entre as opções — encadeie-as, com o modelo de risco
+        como produto final e o app como fonte contínua de dados.
+      </p>
+    </div>
+
+    <div class="layers">
+      <div class="layer l-solo">
+        <div class="lnum"><b>01</b><span>Solo</span></div>
+        <div class="lbody">
+          <h3 style="font-size:19px;font-weight:600;margin-bottom:8px">Camada terrestre — o produtor como sensor</h3>
+          <p class="small" style="color:var(--tinta-2)">
+            App mobile com CNN embarcada e offline para <strong>tronco e ramos</strong>, não só folha: cancro, exsudação,
+            descamação de casca, seca descendente. Cada registro gera ponto GPS, foto, data, fenofase e resposta a seis
+            perguntas de manejo. Um subconjunto vai para isolamento e PCR — é isso que transforma foto em rótulo confiável.
+          </p>
+          <p class="small mb0" style="color:var(--tinta-2)">
+            É a camada de <strong>detecção precoce real</strong>. Nenhum sensor orbital vê um cancro de tronco sob dossel.
+          </p>
+          <div class="chips" style="filter:none">
+            <span class="chip" style="background:#F2ECDF;border-color:#E2DACA;color:#4E5F58">CNN offline TFLite/ONNX</span>
+            <span class="chip" style="background:#F2ECDF;border-color:#E2DACA;color:#4E5F58">geotag obrigatório</span>
+            <span class="chip" style="background:#F2ECDF;border-color:#E2DACA;color:#4E5F58">fila de sincronização</span>
+            <span class="chip" style="background:#F2ECDF;border-color:#E2DACA;color:#4E5F58">amostra para laboratório</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="layer l-drone">
+        <div class="lnum"><b>02</b><span>Drone</span></div>
+        <div class="lbody">
+          <h3 style="font-size:19px;font-weight:600;margin-bottom:8px">Camada drone — verdade de campo em escala de copa</h3>
+          <p class="small" style="color:var(--tinta-2)">
+            RGB a 2–3 cm e multiespectral com red-edge (DJI Mavic 3M, P4 Multispectral, MicaSense/Altum). Produtos:
+            ortomosaico, MDS/MDT convertidos em <strong>CHM</strong>, delineamento de copas individuais, índices por copa e
+            classificação em cinco níveis de severidade. Havendo orçamento, uma câmera térmica leve adiciona CWSI —
+            foi o ganho decisivo nos trabalhos com <em class="sci">Xylella</em> em oliveira.
+          </p>
+          <p class="small mb0" style="color:var(--tinta-2)">
+            Voe as <strong>mesmas propriedades-sentinela três vezes por ano</strong>, sempre com painel de calibração
+            radiométrica e mesma janela solar. Repetição temporal vale mais que área coberta.
+          </p>
+          <div class="chips">
+            <span class="chip" style="background:#F2ECDF;border-color:#E2DACA;color:#4E5F58">NDRE · CIre · TCARI/OSAVI</span>
+            <span class="chip" style="background:#F2ECDF;border-color:#E2DACA;color:#4E5F58">MSAVI2 · PRI</span>
+            <span class="chip" style="background:#F2ECDF;border-color:#E2DACA;color:#4E5F58">CHM fotogramétrico</span>
+            <span class="chip" style="background:#F2ECDF;border-color:#E2DACA;color:#4E5F58">RTK/PPK · GCP</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="layer l-sat">
+        <div class="lnum"><b>03</b><span>Órbita</span></div>
+        <div class="lbody">
+          <h3 style="font-size:19px;font-weight:600;margin-bottom:8px">Camada satélite — cobertura contínua dos 5.168 ha</h3>
+          <p class="small" style="color:var(--tinta-2)">
+            Duas funções distintas. <strong>(a) Estratificação:</strong> mapear onde estão os craveiros, usando a janela
+            fenológica de novembro–dezembro. <strong>(b) Monitoramento de declínio:</strong> série PlanetScope de 3 m por copa
+            detectada, com <strong>detecção de quebra estrutural</strong> (BFAST/CCDC) em vez de limiar fixo de NDVI.
+            Sentinel-2 entra como histórico longo e Sentinel-1 como seguro contra nuvem.
+          </p>
+          <p class="small mb0" style="color:var(--tinta-2)">
+            Comece pelos basemaps Planet NICFI para os trópicos antes de comprar cena; para blocos críticos, contrate
+            imagem de altíssima resolução pontualmente.
+          </p>
+          <div class="chips">
+            <span class="chip" style="background:#F2ECDF;border-color:#E2DACA;color:#4E5F58">PlanetScope 3 m</span>
+            <span class="chip" style="background:#F2ECDF;border-color:#E2DACA;color:#4E5F58">Sentinel-2 L2A</span>
+            <span class="chip" style="background:#F2ECDF;border-color:#E2DACA;color:#4E5F58">Sentinel-1 GRD</span>
+            <span class="chip" style="background:#F2ECDF;border-color:#E2DACA;color:#4E5F58">BFAST / CCDC · harmônicos</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="layer l-mod">
+        <div class="lnum"><b>04</b><span>Modelo</span></div>
+        <div class="lbody">
+          <h3 style="font-size:19px;font-weight:600;margin-bottom:8px">Camada de risco — o entregável que muda decisão</h3>
+          <p class="small" style="color:var(--tinta-2)">
+            Modelo de risco por talhão com os focos confirmados como resposta e, como preditores: distância ao foco mais
+            próximo, densidade de plantio, idade do pomar, índice topográfico de umidade, declividade, drenagem, textura de
+            solo, histórico de Ethrel, chuva acumulada, temperatura, proximidade de borda de mata e produtos espectrais.
+          </p>
+          <p class="small mb0" style="color:var(--tinta-2)">
+            Gradient boosting e floresta de sobrevivência com <strong>validação cruzada espacial em blocos</strong> — nunca
+            divisão aleatória, que vaza vizinhança e infla a acurácia. Combine com um modelo epidemiológico de dispersão
+            para prever a frente de avanço.
+          </p>
+          <div class="chips">
+            <span class="chip" style="background:#F2ECDF;border-color:#E2DACA;color:#4E5F58">LightGBM · Random Survival Forest</span>
+            <span class="chip" style="background:#F2ECDF;border-color:#E2DACA;color:#4E5F58">spatial block CV</span>
+            <span class="chip" style="background:#F2ECDF;border-color:#E2DACA;color:#4E5F58">SHAP por talhão</span>
+            <span class="chip" style="background:#F2ECDF;border-color:#E2DACA;color:#4E5F58">kernel de dispersão</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card dk" style="margin-top:26px">
+      <h3>Princípio de projeto</h3>
+      <p class="mb0" style="font-size:16px">
+        Nada entra no conjunto de treino sem passar por revisão humana ou laboratório. O gargalo do projeto é
+        <strong>rótulo confiável</strong>, e a arquitetura inteira existe para produzi-lo em volume crescente e custo decrescente.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== 05 MODELOS ====================== -->
+<section class="sec" id="modelos">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Especificação de IA</span>
+      <h2 class="sec-t"><span class="sec-num">05</span>Cinco modelos, uma cadeia de evidência</h2>
+      <p class="lead">
+        A solução não é um modelo. É um sistema em que a foto do produtor vira suspeita, a suspeita vira copa rotulada,
+        a copa rotulada vira série temporal, e a série temporal vira probabilidade de infecção por talhão.
+        Cada elo tem entrada, saída e critério de aceite definidos.
+      </p>
+    </div>
+
+    <div class="card lead-v" style="margin-bottom:22px">
+      <span class="bdg b-go">M1 · deep learning · roda no celular</span>
+      <h3 style="margin-top:12px;font-size:21px">Classificador multitarefa de sintoma em foto de campo</h3>
+      <p class="small">
+        O único modelo capaz de detecção realmente precoce, porque enxerga o tronco e o ramo — onde o cancro aparece antes
+        de qualquer alteração de dossel.
+      </p>
+      <div class="g4" style="gap:14px;margin:16px 0">
+        <div class="card flat"><span class="tiny">ENTRADA</span><p class="small mb0" style="margin-top:6px">RGB 384×384 + metadados (fenofase, órgão)</p></div>
+        <div class="card flat"><span class="tiny">BACKBONE</span><p class="small mb0" style="margin-top:6px">MobileNetV4 / EfficientNet-Lite0, ImageNet + auto-supervisão local</p></div>
+        <div class="card flat"><span class="tiny">SAÍDAS</span><p class="small mb0" style="margin-top:6px">órgão (4) · classe (7) · severidade (5) · confiança calibrada</p></div>
+        <div class="card flat"><span class="tiny">ORÇAMENTO</span><p class="small mb0" style="margin-top:6px">&lt;12 MB em INT8 · &lt;400 ms em Android de entrada</p></div>
+      </div>
+      <ul class="tick">
+        <li><strong>Sete classes, não duas.</strong> Sadia · cancro/exsudação · seca descendente · erva-de-passarinho · cochonilha/fumagina · dano por Ethrel · outro estresse.</li>
+        <li><strong>Calibração obrigatória</strong> por temperature scaling. O app mostra confiança; confiança não calibrada destrói a confiança do produtor no sistema.</li>
+        <li><strong>Rejeição de fora-de-domínio</strong> (foto de cacau, de chão, desfocada). Melhor abster do que responder errado.</li>
+        <li><strong>Protocolo de três fotos</strong> guiado por sobreposição na tela: tronco a 1 m, ramo sintomático, copa a 5 m. Agregação por voto ponderado eleva o recall sem aumentar o modelo.</li>
+      </ul>
+      <div class="chips">
+        <span class="chip">≥ 0,90 recall da classe cancro</span>
+        <span class="chip">≥ 0,70 precisão mínima</span>
+        <span class="chip">≤ 0,05 erro de calibração</span>
+        <span class="chip">≥ 0,80 macro-F1 nas 7 classes</span>
+      </div>
+    </div>
+
+    <div class="g2" style="margin-bottom:22px">
+      <div class="card lead-a">
+        <span class="bdg b-mid">M2 · deep learning · lote</span>
+        <h3 style="margin-top:12px">Delineamento de copas individuais</h3>
+        <p class="small">
+          Transforma um mosaico contínuo em <strong>um registro por árvore</strong> — a unidade de análise de todo o resto do sistema.
+          Mask R-CNN (detectree2) ou YOLO-seg, com DeepForest como base; entrada de 6 canais (R, G, B, red-edge, NIR e CHM).
+        </p>
+        <ul class="tick">
+          <li>O <strong>CHM como sexto canal</strong> é o que faz funcionar em sistema agroflorestal: separa craveiro (8–15 m) de banana, cacau e sub-bosque melhor do que qualquer combinação espectral.</li>
+          <li><strong>Identidade persistente</strong> da árvore entre campanhas por casamento espacial de centroides. Sem isso não existe série temporal por indivíduo.</li>
+          <li>Anotação inicial acelerada com SAM/SAM2 e correção manual reduz o custo de rotulagem em ordem de grandeza.</li>
+        </ul>
+        <div class="chips"><span class="chip">F1 ≥ 0,85 em copas dominantes</span><span class="chip">IoU médio ≥ 0,60</span></div>
+      </div>
+      <div class="card lead-b">
+        <span class="bdg b-blue">M3 · híbrido · lote</span>
+        <h3 style="margin-top:12px">Severidade por copa (multiespectral + série orbital)</h3>
+        <p class="small">
+          Duas variantes em paralelo: atributos tabulares por copa em gradient boosting, e CNN sobre recortes de copa.
+          Em conjuntos pequenos e ruidosos, a variante tabular quase sempre vence — e é auditável.
+        </p>
+        <ul class="tick">
+          <li><strong>Não use NDVI como variável principal.</strong> O sinal útil está no red-edge (NDRE, CIre) e nos índices ligados ao pardeamento.</li>
+          <li><strong>Detecção de quebra estrutural</strong> na série por copa, em vez de limiar fixo: o alvo é a ruptura da trajetória própria da árvore.</li>
+          <li>Atributos estruturais (altura, área de copa, rugosidade, fração de sombra, textura GLCM) somam tanto quanto os espectrais.</li>
+        </ul>
+        <div class="chips"><span class="chip">saída: severidade 0–4 + intervalo</span></div>
+      </div>
+    </div>
+
+    <div class="card lead-c" style="margin-bottom:22px">
+      <span class="bdg b-no">M4 · análise preditiva · entregável final</span>
+      <h3 style="margin-top:12px;font-size:21px">Risco espaço-temporal por talhão — sobrevivência, não classificação</h3>
+      <p class="small">
+        A pergunta operacional não é "esta árvore está doente?". É <strong>"qual talhão vai adoecer primeiro, e quando?"</strong>
+        Isso é um problema de tempo-até-evento; tratá-lo como classificação binária joga fora a informação de censura —
+        os talhões que ainda não adoeceram, mas podem adoecer amanhã.
+      </p>
+      <div class="g4" style="gap:14px;margin:16px 0">
+        <div class="card flat"><span class="tiny">UNIDADE</span><p class="small mb0" style="margin-top:6px">talhão (0,2–2 ha), painel mensal</p></div>
+        <div class="card flat"><span class="tiny">MODELO BASE</span><p class="small mb0" style="margin-top:6px">Random Survival Forest + LightGBM-Cox</p></div>
+        <div class="card flat"><span class="tiny">CAMADA ESPACIAL</span><p class="small mb0" style="margin-top:6px">kernel de dispersão + efeito aleatório por município</p></div>
+        <div class="card flat"><span class="tiny">SAÍDAS</span><p class="small mb0" style="margin-top:6px">P(foco em 6 e 12 meses) · tempo esperado até 1º foco · ranking de visita</p></div>
+      </div>
+      <ul class="tick">
+        <li><strong>Predição com intervalo, não ponto.</strong> Um técnico age diferente diante de "risco 0,7 ± 0,05" e de "risco 0,7 ± 0,4".</li>
+        <li><strong>SHAP por talhão na ficha do produtor:</strong> "seu risco subiu principalmente por proximidade de foco a 340 m e por drenagem deficiente". Explicação é o que converte predição em ação.</li>
+        <li><strong>Validação:</strong> C-index ≥ 0,70 em município não visto no treino; ganho de pelo menos 3× no decil de maior risco; curva de calibração reportada por safra.</li>
+      </ul>
+    </div>
+
+    <div class="card flat">
+      <span class="bdg b-gray">M5 · opcional · alto retorno com poucos rótulos</span>
+      <h3 style="margin-top:12px">Embeddings de modelo de fundação geoespacial</h3>
+      <p class="small mb0">
+        Em vez de treinar do zero com poucos rótulos, extraia representações de um modelo de fundação de sensoriamento remoto
+        (Prithvi, Clay, SatMAE, DOFA) sobre a série Sentinel-2/PlanetScope e use-as como variáveis em M3 e M4. O ganho é típico
+        onde há menos de 5.000 amostras rotuladas — exatamente o cenário do ano 1. Complemento barato: pré-treino
+        auto-supervisionado nos próprios mosaicos de drone não rotulados, que serão abundantes desde a primeira campanha.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== 06 APP ====================== -->
+<section class="sec alt" id="app">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Versão mobile</span>
+      <h2 class="sec-t"><span class="sec-num">06</span>O app faz sentido — desde que devolva algo ao produtor</h2>
+      <p class="lead">
+        Apps de vigilância fitossanitária morrem por falta de adoção, não por falta de acurácia. O alvo aqui é
+        Android 8+, aparelho de entrada, sem rede na maior parte do tempo, usuário que não vai ler manual.
+      </p>
+    </div>
+
+    <div class="g3" style="margin-bottom:26px">
+      <div class="card lead-v">
+        <h3>Requisitos inegociáveis</h3>
+        <ul class="tick">
+          <li>Inferência local (TFLite/ONNX) com fila de sincronização — offline é requisito, não otimização</li>
+          <li>Android primeiro, menos de 80 MB, resposta em menos de 2 s</li>
+          <li>Grau de confiança sempre visível, com opção de contestar</li>
+          <li>Guia fotográfico: tronco, ramo, folha e copa</li>
+          <li>Trilha de auditoria: quem, quando, onde, qual versão do modelo</li>
+        </ul>
+      </div>
+      <div class="card lead-a">
+        <h3>O que devolve valor a quem usa</h3>
+        <ul class="tick">
+          <li>Recomendação de manejo imediata: poda sanitária, eliminação, cicatrizante, ferramenta desinfetada</li>
+          <li>Mapa da própria propriedade, com histórico por árvore</li>
+          <li>Alerta de foco confirmado num raio definido</li>
+          <li>Ficha exportável para crédito e assistência técnica</li>
+          <li>Canal de contato com o técnico da cooperativa</li>
+        </ul>
+      </div>
+      <div class="card lead-b">
+        <h3>Governança de dados</h3>
+        <ul class="tick">
+          <li>Consentimento LGPD explícito e revogável</li>
+          <li>O dado da propriedade pertence ao produtor; o agregado, à associação</li>
+          <li>Localização exata nunca pública — divulgue apenas grade agregada</li>
+          <li>Institucionalize com Aprocravo, cooperativas, Ceplac, SDR-BA e ADAB</li>
+          <li>Detecção do app é <strong>suspeita</strong>, não diagnóstico oficial</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="g-2-1">
+      <div class="card">
+        <h3>Fluxo de uma ocorrência, do toque à sincronização</h3>
+        <ol class="steps" style="margin-top:14px">
+          <li><strong>Abrir</strong> — o app carrega os talhões da propriedade do cache local (tiles offline + GeoJSON).</li>
+          <li><strong>Localizar</strong> — GNSS em média móvel de 30 s; grava latitude, longitude e <strong>acurácia</strong>. Se a acurácia passar de 10 m: "sinal fraco — ande 20 m e aguarde".</li>
+          <li><strong>Fotografar</strong> — sobreposição guia três enquadramentos; checagem local de nitidez antes de aceitar a foto.</li>
+          <li><strong>Inferir</strong> — M1 quantizado, três fotos, agregação por voto ponderado. Resultado: classe, severidade e confiança calibrada.</li>
+          <li><strong>Decidir</strong> — confiança ≥ 0,80 entrega diagnóstico e recomendação; entre 0,50 e 0,80 vira "suspeita, enviar para revisão"; abaixo de 0,50 o app <strong>se abstém</strong> e ensina a refazer a foto.</li>
+          <li><strong>Registrar</strong> — SQLite local: foto comprimida, geometria, formulário, versão do modelo, identificador do aparelho e carimbo de tempo.</li>
+          <li><strong>Sincronizar</strong> — fila delta assinada e retomável, sobe quando houver rede.</li>
+          <li><strong>Devolver</strong> — mapa atualizado da propriedade e alerta de foco confirmado no raio definido.</li>
+        </ol>
+      </div>
+      <div>
+        <div class="card lead-c" style="margin-bottom:20px">
+          <h3>Formulário de seis campos, nunca mais</h3>
+          <ul class="plain">
+            <li>Órgão fotografado (detectado automaticamente, confirmável)</li>
+            <li>Idade aproximada da planta</li>
+            <li>Aplicou Ethrel nos últimos 90 dias? (sim/não/data)</li>
+            <li>Houve poda ou ferimento recente?</li>
+            <li>Há encharcamento no local em chuva forte?</li>
+            <li>Plantas vizinhas com sintoma parecido? (0 / 1–3 / mais de 3)</li>
+          </ul>
+          <p class="small mb0">Todos alimentam diretamente o modelo de risco. Cada campo adicional derruba a taxa de conclusão — resista à tentação de pedir mais.</p>
+        </div>
+        <div class="card flat">
+          <h3 style="font-size:16px">O que não fazer</h3>
+          <ul class="cross">
+            <li>Exibir "doente/sadio" sem confiança</li>
+            <li>Exigir cadastro longo antes do primeiro uso</li>
+            <li>Mandar a foto para a nuvem para diagnosticar</li>
+            <li>Mostrar foco de terceiros com precisão de ponto</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout ok">
+      <span class="k">Referência de adoção</span>
+      <p class="small mb0">
+        O PlantVillage Nuru (Penn State, IITA, CGIAR e FAO) funcionou porque roda offline, responde na hora e entrega
+        recomendação de manejo — em avaliação de campo chegou a superar consideravelmente técnicos de extensão em doenças
+        da mandioca, e foi treinado inicialmente com um conjunto da ordem de 2.700 imagens anotadas. O Plantix, na Índia,
+        mostrou a escala possível com dados colaborativos. A lição comum: <strong>retorno imediato ao agricultor é o que
+        sustenta a coleta</strong>.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== 07 GEOLOCALIZAÇÃO ====================== -->
+<section class="sec" id="geo">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Base geoespacial</span>
+      <h2 class="sec-t"><span class="sec-num">07</span>Como amarrar 3.539 produtores a geometrias confiáveis</h2>
+      <p class="lead">
+        Aqui está o risco silencioso do projeto: o GPS de celular tem erro de 3 a 8 metros e um pixel PlanetScope tem 3 metros.
+        Rótulo mal posicionado aponta para a árvore vizinha sadia e envenena o treino inteiro.
+      </p>
+    </div>
+
+    <div class="tbox" style="margin-bottom:22px">
+      <table>
+        <thead><tr><th>Camada</th><th>Fonte</th><th>Precisão alvo</th><th>Uso</th></tr></thead>
+        <tbody>
+          <tr><td><b>Propriedade</b></td><td>Polígono do CAR (SICAR), complementado por SIGEF/INCRA</td><td>limite declarado</td><td>Base cadastral já pronta para os 22 municípios; casar produtor ↔ imóvel</td></tr>
+          <tr><td><b>Talhão</b></td><td>Desenho em campo (QField) sobre imagem de alta resolução</td><td>1–3 m</td><td>Unidade do modelo preditivo M4</td></tr>
+          <tr><td><b>Árvore — rede sentinela</b></td><td>GNSS RTK/PPK via NTRIP com base RBMC/IBGE, ou pós-processamento IBGE-PPP</td><td><b>&lt; 30 cm</b></td><td>Rótulo de treino de M2 e M3 — inegociável</td></tr>
+          <tr><td><b>Árvore — rede difusa</b></td><td>GPS do celular com média de 30 s e registro de acurácia</td><td>3–8 m</td><td>Vigilância e M4; nunca como rótulo pixel a pixel</td></tr>
+          <tr><td><b>Copa</b></td><td>M2 sobre ortomosaico ortorretificado com GCP/PPK</td><td>10–20 cm</td><td>Série temporal por indivíduo</td></tr>
+          <tr><td><b>Divulgação pública</b></td><td>Agregação em grade hexagonal</td><td>agregado</td><td>Mapa de risco sem expor propriedade individual</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="g-2-1">
+      <div class="card" style="background:#0E2A22;color:#D8E6DE;border-color:#164034">
+        <span class="tiny" style="color:#96B93C">MODELO DE DADOS MÍNIMO · PostGIS · SIRGAS 2000 / UTM 24S (EPSG:31984)</span>
+        <pre style="font-family:'IBM Plex Mono',monospace;font-size:12.2px;line-height:1.7;overflow-x:auto;margin:14px 0 0;color:#CFE3D8">
+produtor    (id, nome, contato, consentimento_lgpd, data_consentimento)
+propriedade (id, produtor_id, car_codigo, <b style="color:#96B93C">geom MULTIPOLYGON</b>, municipio, area_ha)
+talhao      (id, propriedade_id, <b style="color:#96B93C">geom POLYGON</b>, ano_plantio,
+             densidade_pl_ha, espacamento_m, origem_muda, consorcio_saf)
+arvore      (id, talhao_id, <b style="color:#96B93C">geom POINT</b>, <b style="color:#DFA01E">precisao_m</b>, metodo_gnss,
+             altura_m, copa_m2, id_persistente)
+ocorrencia  (id, arvore_id, data, origem[app|drone|campo], classe_predita,
+             severidade, confianca, <b style="color:#DFA01E">versao_modelo</b>, foto_uri,
+             revisado_por, classe_confirmada)
+amostra_lab (id, ocorrencia_id, data_coleta, metodo[isolamento|pcr], resultado)
+manejo      (id, talhao_id, data, tipo[ethrel|poda|adubacao|erradicacao],
+             dose, observacao)
+voo         (id, talhao_id, data, sensor, gsd_cm, painel_calibracao, orto_uri)
+predicao    (id, talhao_id, data_ref, p_foco_6m, p_foco_12m, ic_inf, ic_sup,
+             ranking, versao_modelo, shap_top3)
+
+CREATE INDEX ON arvore USING GIST (geom);
+CREATE INDEX ON ocorrencia (talhao_id, data DESC);</pre>
+      </div>
+      <div>
+        <div class="callout" style="margin-top:0">
+          <span class="k">Regra de ouro</span>
+          <p class="small mb0">
+            Toda geometria carrega sua incerteza. O campo <code style="font-family:'IBM Plex Mono',monospace;font-size:13px;background:var(--papel-2);padding:1px 5px;border-radius:3px">precisao_m</code>
+            não é metadado decorativo — é <strong>filtro obrigatório</strong> na consulta que monta o conjunto de treino.
+            Projetos que não fazem isso descobrem o problema no ano 2, quando o modelo não generaliza e ninguém sabe por quê.
+          </p>
+        </div>
+        <div class="card flat">
+          <h3 style="font-size:16px">Coleta em campo</h3>
+          <p class="small mb0">
+            QField + Mergin Maps como bancada principal; KoboToolbox ou ODK Collect como alternativa.
+            Formulário com foto e GPS obrigatórios, funcionamento offline e sincronização posterior.
+            O mesmo formulário usado pelos técnicos no piloto é o que vira, depois, o formulário do app do produtor.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== 08 PREDITIVO ====================== -->
+<section class="sec alt" id="preditivo">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Análise preditiva</span>
+      <h2 class="sec-t"><span class="sec-num">08</span>As variáveis que entram no modelo — e por que cada uma</h2>
+      <p class="lead">
+        <em class="sci">Cytospora</em> é um patógeno oportunista de plantas debilitadas e de tecidos feridos. Isso define
+        a hipótese de trabalho e, portanto, a lista de preditores: <strong>estresse do sistema radicular, ferimento e
+        inóculo próximo</strong>.
+      </p>
+    </div>
+
+    <div class="tbox" style="margin-bottom:22px">
+      <table>
+        <thead><tr><th style="width:27%">Variável</th><th style="width:30%">Como obter</th><th>Hipótese</th></tr></thead>
+        <tbody>
+          <tr style="background:#F0EADC"><td colspan="3"><b>Hospedeiro e plantio</b></td></tr>
+          <tr><td>Idade do pomar</td><td>Formulário + série histórica Landsat/Sentinel</td><td>Relatos regionais apontam mortalidade concentrada a partir dos 8–10 anos — a idade é provável preditor de topo</td></tr>
+          <tr><td>Densidade e espaçamento</td><td>M2 (copas/ha) e cadastro de talhão</td><td>Adensamento excessivo é citado como fator local de declínio</td></tr>
+          <tr><td>Origem e lote da muda</td><td>Formulário / registro da cooperativa</td><td>Rastreia introdução de inóculo por material propagativo</td></tr>
+          <tr><td>Vigor e área de copa</td><td>M2 + CHM</td><td>Proxy direto de debilidade prévia</td></tr>
+          <tr style="background:#FAEDE0"><td colspan="3"><b>Manejo — o bloco mais preditivo e o mais difícil de coletar</b></td></tr>
+          <tr><td><b>Ethrel: dose, data, nº de aplicações</b></td><td>Formulário do app, obrigatório</td><td>Estresse químico repetido é o principal suspeito local de predisposição — e o confundidor nº 1 dos sensores</td></tr>
+          <tr><td>Poda e ferimentos</td><td>Formulário + registro de manejo</td><td>Porta de entrada clássica de cancro; janela de risco pós-poda</td></tr>
+          <tr><td>Desinfecção de ferramenta</td><td>Formulário (sim/não/às vezes)</td><td>Dispersão antropogênica entre plantas e entre propriedades</td></tr>
+          <tr><td>Nutrição e calagem</td><td>Análise de solo, quando houver</td><td>Solos regionais são ácidos e pobres, com adubação rara — deficiência agrava o declínio</td></tr>
+          <tr><td>Erradicação de plantas doentes</td><td>Registro de manejo</td><td>Variável de tratamento — permite avaliar o efeito da própria intervenção</td></tr>
+          <tr style="background:#E6EEF6"><td colspan="3"><b>Solo, terreno e água</b></td></tr>
+          <tr><td>Índice topográfico de umidade (TWI)</td><td>MDT Copernicus 30 m ou MDS de drone</td><td>Encharcamento radicular como predisposição; provável preditor de topo</td></tr>
+          <tr><td>Declividade e curvatura</td><td>MDT</td><td>Acúmulo versus drenagem de água e de inóculo em enxurrada</td></tr>
+          <tr><td>Textura, matéria orgânica, pH, profundidade</td><td>SoilGrids + análises pontuais</td><td>Capacidade de retenção e aeração</td></tr>
+          <tr><td>Distância a curso d'água</td><td>Base hidrográfica ANA/IBGE</td><td>Lençol raso e encharcamento sazonal</td></tr>
+          <tr style="background:#E9F1EC"><td colspan="3"><b>Clima e tempo</b></td></tr>
+          <tr><td>Chuva acumulada 30/60/90 dias</td><td>CHIRPS, IMERG, estações INMET</td><td>Excesso e déficit, ambos disparadores de estresse</td></tr>
+          <tr><td>Déficit de pressão de vapor</td><td>ERA5-Land</td><td>Estresse hídrico atmosférico</td></tr>
+          <tr><td>Duração de molhamento foliar</td><td>Derivado de UR e chuva</td><td>Esporulação e dispersão por respingo</td></tr>
+          <tr><td>Veranicos e anomalia térmica</td><td>ERA5-Land + série própria</td><td>Predisposição por seca em cultura que não tolera déficit</td></tr>
+          <tr style="background:#F7E7EA"><td colspan="3"><b>Paisagem e epidemiologia — normalmente o bloco de maior peso</b></td></tr>
+          <tr><td><b>Distância ao foco confirmado mais próximo</b></td><td>Banco de ocorrências</td><td>Preditor mais forte em praticamente todo patossistema de perene</td></tr>
+          <tr><td>Nº de focos em raios de 250 / 500 / 1000 m</td><td>Consulta espacial</td><td>Pressão de inóculo local</td></tr>
+          <tr><td>Incidência do talhão no ano anterior</td><td>Histórico</td><td>Autocorrelação temporal, quase sempre dominante</td></tr>
+          <tr><td>Densidade regional de craveiros</td><td>Mapa de M2 + classificação orbital</td><td>Conectividade do hospedeiro</td></tr>
+          <tr><td>Distância à borda de mata</td><td>MapBiomas / classificação própria</td><td>Microclima de borda, umidade e sombreamento</td></tr>
+          <tr><td>Histórico de replantio na mesma área</td><td>Formulário + série histórica</td><td>Produtores relatam insucesso ao replantar no mesmo local — hipótese de inóculo residual no solo, diretamente testável</td></tr>
+          <tr style="background:#E6EEF6"><td colspan="3"><b>Sensoriamento</b></td></tr>
+          <tr><td>NDRE / CIre médios e desvio no talhão</td><td>Drone e PlanetScope</td><td>Estado fisiológico agregado</td></tr>
+          <tr><td>Resíduo do modelo harmônico sazonal</td><td>Série Sentinel-2 / Planet</td><td>Desvio da trajetória esperada equivale a anomalia</td></tr>
+          <tr><td>Tendência de 12 meses e data de quebra</td><td>BFAST/CCDC</td><td>Declínio em curso, mesmo sem sintoma reportado</td></tr>
+          <tr><td>Embeddings de modelo de fundação</td><td>M5</td><td>Captura padrões não codificados manualmente</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="g3">
+      <div class="card lead-c">
+        <h3>Vazamento espacial — o erro que vai acontecer</h3>
+        <p class="small mb0">Talhões vizinhos compartilham solo, clima, manejo e inóculo. Divisão aleatória entrega AUC de 0,95 na validação e 0,62 em campo. Use validação cruzada em blocos espaciais e um hold-out de municípios inteiros. <strong>Reporte as duas métricas lado a lado</strong> — a diferença entre elas é o resultado honesto.</p>
+      </div>
+      <div class="card lead-c">
+        <h3>Vazamento temporal</h3>
+        <p class="small mb0">Nunca use variável posterior à data de referência da predição. Monte a base de atributos como painel mensal com carimbo de tempo e consulte sempre com corte temporal. Treine em 2026 e teste em 2027 — não o contrário.</p>
+      </div>
+      <div class="card lead-a">
+        <h3>Ano 1 sem histórico: o que fazer</h3>
+        <p class="small mb0">Sem série de focos, comece por um <strong>modelo de suscetibilidade</strong> (covariáveis estáticas + incidência transversal) e por um modelo de dispersão paramétrico calibrado nos focos conhecidos. Substitua por sobrevivência assim que houver duas safras de observação. Declare a limitação no relatório — ela é temporária e esperada.</p>
+      </div>
+    </div>
+
+    <div class="callout info">
+      <span class="k">Do escore à ação</span>
+      <p class="small mb0">
+        O painel não entrega probabilidade; entrega <strong>fila de visita</strong>.
+        Capacidade real da equipe (por exemplo, 25 visitas por semana) × ranking de risco × custo de deslocamento =
+        roteiro semanal otimizado. É esse artefato, e não o mapa colorido, que muda a curva de incidência.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== 09 PILOTO ====================== -->
+<section class="sec dark" id="piloto">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Ação inicial · o primeiro passo executável</span>
+      <h2 class="sec-t"><span class="sec-num" style="color:#96B93C">09</span>Piloto: 10 propriedades em Valença</h2>
+      <p class="lead">
+        O plano de visitar 10 propriedades com foco atual ou histórico da doença na região de Valença está
+        <strong>correto como primeiro passo</strong> — desde que o objetivo declarado seja o certo. Este piloto
+        <strong>não treina a inteligência artificial</strong>. Ele produz o ativo sem o qual nenhum modelo é treinável:
+        um conjunto georreferenciado, com severidade padronizada e confirmação laboratorial.
+      </p>
+    </div>
+
+    <div class="g2" style="margin-bottom:26px">
+      <div class="card dk">
+        <h3>O que o piloto entrega</h3>
+        <ul class="tick" style="color:rgba(255,255,255,.85)">
+          <li>O <strong>primeiro conjunto rotulado</strong> com confirmação de laboratório</li>
+          <li>Validação do <strong>protocolo de campo</strong> antes de escalar o custo</li>
+          <li>Medida real de <strong>separabilidade espectral</strong> por classe de severidade</li>
+          <li>Teste de usabilidade do formulário que virará o app</li>
+          <li>Evidência para <strong>decisão go/no-go</strong> e para captação de recurso</li>
+          <li>Um mapa de árvore por árvore que já tem valor para os 10 produtores participantes</li>
+        </ul>
+      </div>
+      <div class="card dk" style="border-color:rgba(191,47,74,.5)">
+        <h3>O que o piloto <span style="color:#DE5C74">não</span> entrega</h3>
+        <ul class="cross" style="color:rgba(255,255,255,.85)">
+          <li><strong>Modelo preditivo de risco.</strong> Dez unidades amostrais não sustentam nenhum modelo espacial: são necessárias 40–60 propriedades e duas safras.</li>
+          <li><strong>Mapa regional.</strong> A extrapolação orbital para os 5.168 ha depende da rede sentinela completa.</li>
+          <li><strong>Classificador pronto para produtor.</strong> O modelo de imagem sai em versão baseline, para uso interno da equipe técnica.</li>
+          <li><strong>Prevalência regional.</strong> Uma amostra dirigida a propriedades com foco não estima incidência — ela é enviesada por construção, e assumir isso é o que a torna útil.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="callout warn" style="background:rgba(255,255,255,.07);border-color:rgba(223,160,30,.55);color:#fff">
+      <span class="k" style="color:#DFA01E">A aritmética do piloto — leia antes de fechar o número em 10</span>
+      <p class="small" style="color:rgba(255,255,255,.85);margin-bottom:12px">
+        A área média por estabelecimento em Valença é de <strong>1,73 ha</strong> (a maior entre os grandes produtores, mas ainda pequena).
+        Com densidade típica regional de 100 a 160 plantas por hectare, <strong>10 propriedades rendem entre 1.700 e 2.800 árvores</strong>
+        georreferenciáveis. A rede de treino recomendada para os modelos de copa e severidade pede de 3.000 a 6.000 árvores.
+      </p>
+      <p class="small mb0" style="color:rgba(255,255,255,.85)">
+        Três saídas, em ordem de preferência: <strong>(a)</strong> ampliar para 13–15 propriedades, com custo marginal baixo por
+        já haver equipe em campo; <strong>(b)</strong> manter 10 e censar também os talhões vizinhos das mesmas propriedades;
+        <strong>(c)</strong> manter 10 e assumir explicitamente que o piloto valida protocolo, não treina modelo final.
+        Qualquer uma funciona — o que não funciona é escalar sem ter feito essa conta.
+      </p>
+    </div>
+
+    <div class="sp24"></div>
+    <h3 class="sub-t" style="color:#fff">Como escolher as 10 (ou 14) propriedades</h3>
+    <p class="lead" style="margin-bottom:20px">
+      Amostra dirigida, mas estratificada. O erro clássico é escolher dez propriedades vizinhas com muito sintoma:
+      isso gera um conjunto sem variabilidade e <strong>sem negativos verdadeiros</strong>, e o modelo aprende a dizer "doente".
+    </p>
+
+    <div class="tbox" style="margin-bottom:20px">
+      <table>
+        <thead><tr><th>Estrato</th><th class="num">Nº</th><th>Critério de inclusão</th><th>Para que serve no modelo</th></tr></thead>
+        <tbody>
+          <tr><td><b>Foco ativo</b></td><td class="num">4</td><td>Sintoma presente na safra atual, com pelo menos 3 árvores em classes 2–4</td><td>Classes positivas de severidade alta; calibração espectral do colapso</td></tr>
+          <tr><td><b>Foco histórico</b></td><td class="num">3</td><td>Mortalidade nos últimos 3 anos, sem sintoma visível hoje; inclua uma com replantio na mesma área</td><td>Testa a hipótese de inóculo residual no solo e o padrão de reboleira</td></tr>
+          <tr><td><b>Controle pareado</b></td><td class="num">3</td><td>Sem histórico, vizinha ou pareada por idade do pomar, altitude e drenagem</td><td><b>Negativos verdadeiros</b> — sem eles o conjunto é inútil para treino</td></tr>
+          <tr class="tot"><td colspan="4" style="font-weight:400;font-size:13.5px">Distribua em <b>pelo menos três comunidades ou distritos distintos</b> de Valença. Se ampliar para 14, acrescente 2 focos ativos e 2 controles. Critérios de exclusão: sem acesso viável, sem consentimento LGPD assinado, talhão abaixo de 0,5 ha.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="sub-t" style="color:#fff">Protocolo de visita — o que sai de cada propriedade</h3>
+    <div class="g3" style="margin-bottom:26px">
+      <div class="card dk">
+        <span class="tiny" style="color:#96B93C">1 · CADASTRO E GEOMETRIA</span>
+        <ul class="plain" style="color:rgba(255,255,255,.85);margin-top:10px">
+          <li>Consentimento LGPD assinado, revogável</li>
+          <li>Polígono do CAR conferido em campo</li>
+          <li>Talhões desenhados em QField sobre imagem de alta resolução</li>
+          <li>Idade do pomar, espaçamento, consórcio, origem das mudas</li>
+        </ul>
+      </div>
+      <div class="card dk">
+        <span class="tiny" style="color:#96B93C">2 · MALHA DE ÁRVORES</span>
+        <ul class="plain" style="color:rgba(255,255,255,.85);margin-top:10px">
+          <li>Todas as árvores do talhão focal com GNSS RTK/PPK abaixo de 30 cm</li>
+          <li>Altura estimada e diâmetro de copa</li>
+          <li>Severidade 0–4 por <strong>dois avaliadores independentes</strong>, com cálculo de kappa</li>
+          <li>Registro explícito de confundidores presentes</li>
+        </ul>
+      </div>
+      <div class="card dk">
+        <span class="tiny" style="color:#96B93C">3 · FOTOGRAFIA PADRONIZADA</span>
+        <ul class="plain" style="color:rgba(255,255,255,.85);margin-top:10px">
+          <li>Três fotos por árvore: tronco a 1 m, ramo sintomático, copa a 5 m</li>
+          <li>100% das árvores com sintoma; amostra aleatória de 30% das sadias</li>
+          <li>Diversifique hora do dia, luz, aparelho e orientação</li>
+          <li>Meta: 3.500 a 5.000 imagens utilizáveis</li>
+        </ul>
+      </div>
+      <div class="card dk">
+        <span class="tiny" style="color:#DFA01E">4 · AMOSTRAS PARA LABORATÓRIO</span>
+        <ul class="plain" style="color:rgba(255,255,255,.85);margin-top:10px">
+          <li>4 a 6 amostras por propriedade — total de 40 a 60</li>
+          <li>Isolamento e/ou PCR em parceria institucional</li>
+          <li>Inclua árvores <strong>classe 1</strong> (cancro sem sintoma de copa) e assintomáticas</li>
+          <li>É o que separa "detecção de estresse" de "detecção de <em class="sci">Cytospora</em>"</li>
+        </ul>
+      </div>
+      <div class="card dk">
+        <span class="tiny" style="color:#DFA01E">5 · VOO DE DRONE</span>
+        <ul class="plain" style="color:rgba(255,255,255,.85);margin-top:10px">
+          <li>RGB 2–3 cm + multiespectral com red-edge</li>
+          <li>Altura 100–120 m, sobreposição 80% frontal e 75% lateral</li>
+          <li>Painel de calibração radiométrica em todo voo, mesma janela solar</li>
+          <li>~2 ha por propriedade: 15–25 min de voo; as 10 cabem em 2–3 dias por campanha</li>
+        </ul>
+      </div>
+      <div class="card dk">
+        <span class="tiny" style="color:#4E9BD8">6 · MANEJO, SOLO E AMBIENTE</span>
+        <ul class="plain" style="color:rgba(255,255,255,.85);margin-top:10px">
+          <li><strong>Ethrel: dose, data e número de aplicações nos últimos 3 anos</strong></li>
+          <li>Poda, ferimentos, desinfecção de ferramenta, adubação e calagem</li>
+          <li>1 amostra composta de solo por talhão: textura, pH, matéria orgânica, P, K, V%</li>
+          <li>MDS do drone para derivar TWI; opcionalmente 2 sensores de temperatura e umidade</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3 class="sub-t" style="color:#fff">Cronograma — 20 semanas, ancorado na melhor janela de voo</h3>
+    <p class="small" style="color:rgba(255,255,255,.75);max-width:74ch;margin-bottom:18px">
+      Começando em agosto de 2026, a campanha principal cai em setembro–outubro (menos nuvem, dossel estável, pré-colheita)
+      e o encerramento aproveita a janela fenológica de novembro–dezembro, quando a floração descola o craveiro da mata.
+      Essa sincronia vale mais do que qualquer ganho de arquitetura de modelo.
+    </p>
+
+    <div class="gantt" style="margin-bottom:16px">
+      <div class="grow ghead">
+        <div class="gl">Frente de trabalho</div>
+        <div class="gt">
+          <span style="grid-column:1/5">AGO</span><span style="grid-column:5/9">SET</span><span style="grid-column:9/14">OUT</span><span style="grid-column:14/18">NOV</span><span style="grid-column:18/21">DEZ</span>
+        </div>
+      </div>
+      <div class="grow"><div class="gl">Acordos, consentimento e seleção final</div><div class="gt"><span class="gbar" style="grid-column:1/4;background:#1B7355"></span></div></div>
+      <div class="grow"><div class="gl">Banco PostGIS, formulários e escala de severidade</div><div class="gt"><span class="gbar" style="grid-column:2/6;background:#1B7355"></span></div></div>
+      <div class="grow"><div class="gl">Treino da equipe e teste em 1 propriedade</div><div class="gt"><span class="gbar" style="grid-column:4/6;background:#3FA37A"></span></div></div>
+      <div class="grow"><div class="gl">Campanha 1 — cadastro, RTK, severidade, fotos</div><div class="gt"><span class="gbar" style="grid-column:5/10;background:#96B93C"></span></div></div>
+      <div class="grow"><div class="gl">Voo de drone 1 (janela ótima)</div><div class="gt"><span class="gbar" style="grid-column:6/8;background:#DFA01E"></span></div></div>
+      <div class="grow"><div class="gl">Coleta e envio de amostras ao laboratório</div><div class="gt"><span class="gbar" style="grid-column:7/10;background:#DFA01E"></span></div></div>
+      <div class="grow"><div class="gl">Processamento: ortomosaicos, CHM, índices por copa</div><div class="gt"><span class="gbar" style="grid-column:9/13;background:#1F6FB2"></span></div></div>
+      <div class="grow"><div class="gl">Campanha 2 — reavaliação de severidade + voo 2</div><div class="gt"><span class="gbar" style="grid-column:12/15;background:#96B93C"></span></div></div>
+      <div class="grow"><div class="gl">Resultados de isolamento e PCR</div><div class="gt"><span class="gbar" style="grid-column:13/18;background:#DFA01E"></span></div></div>
+      <div class="grow"><div class="gl">Janela fenológica: voo 3 + série PlanetScope de floração</div><div class="gt"><span class="gbar" style="grid-column:15/18;background:#1F6FB2"></span></div></div>
+      <div class="grow"><div class="gl">Conjunto rotulado v1 e classificador baseline</div><div class="gt"><span class="gbar" style="grid-column:14/20;background:#BF2F4A"></span></div></div>
+      <div class="grow"><div class="gl">Relatório de separabilidade e decisão go/no-go</div><div class="gt"><span class="gbar" style="grid-column:18/21;background:#BF2F4A"></span></div></div>
+    </div>
+    <p class="tiny" style="color:rgba(255,255,255,.5)">
+      Caminho crítico frequentemente subestimado: autorização de voo (SARPAS/ANAC e DECEA), cadastro da aeronave e
+      atenção a áreas de Mata Atlântica e distância de terceiros. Trate como item de semana 1, não como burocracia final.
+    </p>
+
+    <div class="sp34"></div>
+    <div class="g-2-1">
+      <div>
+        <h3 class="sub-t" style="color:#fff">Orçamento estimado</h3>
+        <div class="tbox">
+          <table>
+            <thead><tr><th>Item</th><th class="num">Faixa (R$)</th><th>Observação</th></tr></thead>
+            <tbody>
+              <tr><td>Equipe de campo — 20 a 25 dias-campo</td><td class="num">45.000–70.000</td><td>Coordenador agrônomo/fitopatologista, técnico de campo, 2 auxiliares locais</td></tr>
+              <tr><td>Serviço de drone multiespectral — 3 campanhas</td><td class="num">18.000–30.000</td><td>Contratado. Compra de equipamento (~R$ 50 mil) só se o programa for adiante</td></tr>
+              <tr><td>GNSS RTK/PPK — aluguel ou aquisição</td><td class="num">6.000–15.000</td><td>Receptor de dupla frequência com correção via rede RBMC</td></tr>
+              <tr><td>Análises laboratoriais — 40 a 60 amostras</td><td class="num">10.000–25.000</td><td>Cai muito com parceria universitária; item inegociável do escopo</td></tr>
+              <tr><td>Análises de solo — 12 amostras compostas</td><td class="num">1.500–3.000</td><td>Fertilidade completa + textura</td></tr>
+              <tr><td>Deslocamento, combustível e hospedagem</td><td class="num">12.000–20.000</td><td>Base operacional em Valença</td></tr>
+              <tr><td>Banco PostGIS, formulários e revisão de dados</td><td class="num">15.000–30.000</td><td>Fundação reaproveitada integralmente na fase seguinte</td></tr>
+              <tr><td>Contingência (10%)</td><td class="num">11.000–19.000</td><td>Chuva fora de época é o risco mais provável</td></tr>
+              <tr class="tot"><td><b>Total</b></td><td class="num"><b>110.000–190.000</b></td><td>Versão enxuta com parceria institucional forte: R$ 70–100 mil</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="tiny" style="color:rgba(255,255,255,.5);margin-top:12px">
+          Faixas de planejamento, a validar com cotação local antes de qualquer compromisso contratual.
+        </p>
+      </div>
+      <div>
+        <div class="card dk" style="border-color:rgba(150,185,60,.45)">
+          <span class="tiny" style="color:#96B93C">PROPORÇÃO</span>
+          <h3 style="margin-top:8px">O piloto custa o equivalente a 2 a 4 hectares</h3>
+          <p class="small mb0" style="color:rgba(255,255,255,.82)">
+            Com cerca de R$ 48 mil por hectare por ano de movimentação regional, o piloto inteiro equivale à produção
+            anual de duas a quatro propriedades médias. Se ele evitar a perda de <strong>quatro hectares</strong>, já se pagou.
+          </p>
+        </div>
+        <div class="sp24"></div>
+        <div class="card dk">
+          <span class="tiny" style="color:#4E9BD8">EQUIPE MÍNIMA</span>
+          <ul class="plain" style="color:rgba(255,255,255,.85);margin-top:10px">
+            <li>1 coordenador agrônomo com apoio de fitopatologia (parceria acadêmica)</li>
+            <li>1 técnico de campo em tempo integral durante as campanhas</li>
+            <li>1 piloto de drone certificado (contratado)</li>
+            <li>1 analista de geoprocessamento em meio período</li>
+            <li>2 auxiliares locais, preferencialmente <strong>produtores-âncora</strong> das próprias comunidades</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="sp34"></div>
+    <h3 class="sub-t" style="color:#fff">Critérios de aceite — a decisão go/no-go em números</h3>
+    <div class="tbox">
+      <table>
+        <thead><tr><th>Entregável</th><th>Meta</th><th>Se falhar</th></tr></thead>
+        <tbody>
+          <tr><td>Base geoespacial de árvores</td><td>≥ 2.000 árvores com precisão abaixo de 30 cm</td><td>Abaixo de 1.500: revisar método GNSS e tempo de ocupação antes de qualquer voo adicional</td></tr>
+          <tr><td>Concordância entre avaliadores</td><td>Kappa ≥ 0,75 na escala de severidade</td><td>Abaixo de 0,60: reescrever a escala com fotos de referência antes de escalar. É barato agora e caríssimo depois</td></tr>
+          <tr><td>Confirmação etiológica</td><td>≥ 40 amostras processadas; <em class="sci">Cytospora</em> confirmada em ≥ 50% das classes 2–4</td><td><b>Confirmação baixa muda o projeto.</b> Pode indicar etiologia múltipla (outros patógenos de tronco e raiz já relatados na cultura) ou causa fisiológica — e o programa passa a ser de declínio, não de uma doença</td></tr>
+          <tr><td>Conjunto fotográfico</td><td>≥ 3.500 imagens úteis, ≥ 300 por classe nas 7 classes</td><td>Classes raras abaixo de 100: planejar busca dirigida específica, não esperar que apareçam sozinhas</td></tr>
+          <tr><td>Separabilidade espectral</td><td>AUC do NDRE entre classe 0 e classes 3–4 ≥ 0,75</td><td>Abaixo disso, a camada drone perde prioridade e o orçamento migra para app e modelo de risco</td></tr>
+          <tr><td>Detecção precoce por sensor</td><td>Teste explícito: a <b>classe 1</b> (cancro sem sintoma de copa) é separável espectralmente?</td><td><b>A resposta provável é não</b> — e essa é a descoberta mais valiosa do piloto, porque redireciona o investimento da copa para o tronco, isto é, para o app</td></tr>
+          <tr><td>Classificador de imagem baseline</td><td>Recall da classe cancro ≥ 0,80 em validação deixando uma propriedade de fora</td><td>Abaixo de 0,65: priorizar mais dados e protocolo fotográfico, não arquitetura nova</td></tr>
+          <tr><td>Usabilidade do formulário</td><td>Conclusão ≥ 90%; tempo por árvore ≤ 4 min</td><td>Cortar campos até atingir a meta. O formulário do piloto é o protótipo do app</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout ok" style="background:rgba(255,255,255,.07);border-color:rgba(63,163,122,.6);color:#fff">
+      <span class="k" style="color:#96B93C">Como o piloto se conecta ao programa</span>
+      <p class="small mb0" style="color:rgba(255,255,255,.86)">
+        As 10 propriedades de Valença são as primeiras da rede sentinela de 40 a 60. Se os critérios de aceite forem
+        atendidos, a expansão natural é: <strong>+15 propriedades em Camamu e Taperoá</strong> (os dois maiores produtores
+        depois de Valença, e Camamu com propriedades maiores e mais legíveis por sensor remoto),
+        <strong>+15 em Igrapiúna, Ituberá e Presidente Tancredo Neves</strong>, fechando a rede sobre os sete municípios
+        que respondem por 92% da área. O protocolo não muda; muda apenas a escala.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== 10 REFERÊNCIAS ====================== -->
+<section class="sec" id="mundo">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Precedentes</span>
+      <h2 class="sec-t"><span class="sec-num">10</span>O que já foi resolvido em outros países</h2>
+      <p class="lead">
+        Sete programas que resolveram partes deste problema. O padrão comum: nenhum deles resolveu com uma única fonte de
+        dado, e todos investiram mais em verdade de campo do que em modelo.
+      </p>
+    </div>
+
+    <div class="tbox" style="margin-bottom:26px">
+      <table>
+        <thead><tr><th style="width:22%">Caso</th><th style="width:16%">Onde</th><th>O que aproveitar aqui</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><b><em class="sci">Xylella fastidiosa</em> em oliveira</b><br><span class="tiny">projetos POnTE / XF-ACTORS</span></td>
+            <td>Apúlia (Itália), Alicante e Maiorca (Espanha)</td>
+            <td><b>O caso mais próximo do seu:</b> cultura perene, milhares de árvores, patógeno letal. Campanhas aerotransportadas hiperespectrais e térmicas detectaram sintomas pré-visuais por traços funcionais e fluorescência. Ao reduzir para câmeras multiespectrais mais térmica, a acurácia caiu para a faixa de 74% — <b>número honesto para calibrar a expectativa com drone</b>.</td>
+          </tr>
+          <tr>
+            <td><b>Murcha do pinheiro</b><br><span class="tiny">nematoide da madeira</span></td>
+            <td>China, Coreia, Japão</td>
+            <td>Modelo maduro de drone com deep learning em floresta densa e heterogênea. Variantes de YOLO alcançam mAP na faixa de 0,89–0,96 em árvores com sintoma avançado — mas trabalhos com hiperespectral relatam cerca de 50% para estágio precoce. Mostra <b>onde está o teto real da detecção precoce por dossel</b>.</td>
+          </tr>
+          <tr>
+            <td><b>HLB / greening dos citros</b></td>
+            <td>China, EUA (Flórida), Brasil</td>
+            <td>Estratégia de varredura ampla por drone somada a diagnóstico preciso no solo — exatamente as camadas 1 e 2 desta arquitetura. Multiespectral com verde/vermelho/NIR passa de 90% em copas sintomáticas. É também a melhor referência mundial de <b>erradicação orientada por risco</b>.</td>
+          </tr>
+          <tr>
+            <td><b>PlantVillage Nuru</b><br><span class="tiny">Penn State · IITA · CGIAR · FAO</span></td>
+            <td>Tanzânia, Quênia e mais de 40 países</td>
+            <td>O modelo do app: CNN offline em Android, diagnóstico instantâneo, aconselhamento em língua local, treinada inicialmente com cerca de 2.700 imagens anotadas. <b>Prova que agricultor familiar adota quando o retorno é imediato.</b></td>
+          </tr>
+          <tr>
+            <td><b>Doença de Sumatra no cravo</b><br><span class="tiny"><em class="sci">Ralstonia syzygii</em></span></td>
+            <td>Indonésia</td>
+            <td>Único precedente de sensoriamento aplicado à <b>mesma cultura</b>, no maior produtor mundial. Confirma que o monitoramento espectro-vegetativo é viável em craveiro, desde que a resolução seja compatível com a copa — reforçando drone e app em vez de média resolução.</td>
+          </tr>
+          <tr>
+            <td><b><em class="sci">Cytospora</em> em Zanzibar e Pemba</b></td>
+            <td>Tanzânia</td>
+            <td>Precedente fitopatológico direto: décadas de convivência e manejo agronômico documentado com a mesma doença na mesma cultura. Base essencial para <b>calibrar a escala de sintomas</b> e para o protocolo de manejo que o app vai recomendar.</td>
+          </tr>
+          <tr>
+            <td><b>Ferrugem do café e culturas de pequenos produtores</b></td>
+            <td>Colômbia, Tailândia, Benim, Amazônia peruana</td>
+            <td>Modelagem de risco de fungo em perene tropical a partir de variáveis climáticas — transferível para o modelo M4. E, para o obstáculo de escala: mapeamento de copas pequenas em talhões abaixo de 5 ha confirma que sensores de 10–30 m são insuficientes e que <b>3 m com deep learning é o patamar viável</b>, com acurácia realista de 70–85% em mosaico agroflorestal.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="sub-t">Parceiros locais — quem já trabalha nisso</h3>
+    <div class="g4">
+      <div class="card lead-v">
+        <h3 style="font-size:16px">UFRB</h3>
+        <p class="small mb0">Identificou os agentes etiológicos da mortalidade do craveiro na região e conduz linha de pesquisa sobre controle biológico com <em class="sci">Trichoderma</em> e <em class="sci">Bacillus</em>. Parceiro natural para a confirmação laboratorial do piloto.</p>
+      </div>
+      <div class="card lead-v">
+        <h3 style="font-size:16px">IF Baiano — campus Valença</h3>
+        <p class="small mb0">Sedia o fórum da cadeia produtiva do cravo no Baixo Sul e tem presença permanente no município do piloto. Porta de entrada para mão de obra técnica e para articulação com produtores.</p>
+      </div>
+      <div class="card lead-a">
+        <h3 style="font-size:16px">Aprocravo · Coopafbasul</h3>
+        <p class="small mb0">Associação de produtores e cooperativa da agricultura familiar. Sem elas não há adesão ao app nem consentimento em escala; com elas, o dado agregado ganha dono institucional legítimo.</p>
+      </div>
+      <div class="card lead-b">
+        <h3 style="font-size:16px">Embrapa · Ceplac · ADAB · SDR-BA</h3>
+        <p class="small mb0">Validação científica, extensão e defesa sanitária. A ADAB é o canal oficial: sem defesa agropecuária no arranjo, um alerta do sistema não vira ação sanitária.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== 11 ROTEIRO ====================== -->
+<section class="sec alt" id="roteiro">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Execução</span>
+      <h2 class="sec-t"><span class="sec-num">11</span>Do piloto ao serviço — 18 meses</h2>
+      <p class="lead">
+        Cada fase termina num ponto de decisão explícito. Se o orçamento vier em partes, a ordem de construção abaixo
+        maximiza o valor do que já foi gasto.
+      </p>
+    </div>
+
+    <div class="g-2-1">
+      <div>
+        <div class="tl">
+          <div class="tli">
+            <div class="td">Mês 0–4 · fundação</div>
+            <div class="th">Piloto de Valença e protocolo</div>
+            <p class="small">As 10 propriedades descritas na seção 09. Acordos institucionais, escala de severidade, consentimento LGPD, banco PostGIS, primeira campanha de drone e confirmação laboratorial.</p>
+            <div class="tdel">Entrega: protocolo publicado + base geoespacial + conjunto rotulado v1 + decisão go/no-go</div>
+          </div>
+          <div class="tli">
+            <div class="td">Mês 4–10 · rede sentinela</div>
+            <div class="th">Expansão para 40–60 propriedades</div>
+            <p class="small">Estratificação por município, idade do pomar, altitude e histórico, cobrindo os sete municípios que somam 92% da área. Três campanhas de drone por propriedade. De 3.000 a 6.000 árvores georreferenciadas. De 150 a 300 amostras laboratoriais.</p>
+            <div class="tdel">Entrega: conjunto rotulado v2 + relatório de separabilidade por classe</div>
+          </div>
+          <div class="tli">
+            <div class="td">Mês 6–12 · modelagem</div>
+            <div class="th">Três modelos, não um</div>
+            <p class="small">Detector de copa e classificador de severidade em imagem de drone; classificador de foto de campo para o app; modelo de suscetibilidade por talhão. Teste explícito de generalização em município não visto.</p>
+            <div class="tdel">Entrega: métricas de recall e PR-AUC por modelo + decisão sobre o app</div>
+          </div>
+          <div class="tli">
+            <div class="td">Mês 10–15 · app e escala orbital</div>
+            <div class="th">Colocar na mão do produtor</div>
+            <p class="small">Beta com 80 a 150 produtores em três municípios, com revisão agronômica de 100% dos registros. Em paralelo, extrapolação orbital: série PlanetScope por copa detectada e detecção de quebra estrutural nos 5.168 ha.</p>
+            <div class="tdel">Entrega: app em campo + primeiro mapa de risco regional</div>
+          </div>
+          <div class="tli">
+            <div class="td">Mês 15–18 · operação</div>
+            <div class="th">De projeto a serviço</div>
+            <p class="small">Painel para cooperativas e defesa sanitária, protocolo de resposta a alerta (visita, confirmação, poda ou erradicação, registro), re-treino trimestral e relatório anual de incidência por município.</p>
+            <div class="tdel">Entrega: serviço operacional + avaliação de impacto contra área-controle</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h3 class="sub-t">Ordem de construção, se o recurso vier em partes</h3>
+        <ol class="steps">
+          <li><strong>Banco PostGIS, cadastro CAR, protocolo e fila de revisão.</strong> Sem base georreferenciada e revisada, nenhum modelo é treinável. Custa pouco e é a fundação.</li>
+          <li><strong>App em modo coleta, sem IA, usado por técnicos.</strong> Gera o conjunto e valida a usabilidade antes de existir modelo.</li>
+          <li><strong>M1 e liberação do app aos produtores.</strong> Primeiro retorno visível; dispara o ciclo de aprendizado ativo.</li>
+          <li><strong>Campanhas de drone e M2.</strong> Cria a unidade "árvore" e a verdade de campo em escala de copa.</li>
+          <li><strong>M3 e série orbital nos 5.168 ha.</strong> Estende a detecção para além das propriedades voadas.</li>
+          <li><strong>M4 e painel de risco.</strong> Depende de pelo menos duas safras de observação para ser honesto.</li>
+        </ol>
+        <div class="callout info">
+          <span class="k">Se só houver recurso para um componente</span>
+          <p class="small mb0">Escolha o item 1 somado ao item 2. Um cadastro georreferenciado, com severidade padronizada e confirmação laboratorial, é um ativo que sobrevive a qualquer troca de arquitetura de modelo — e é a única parte que não pode ser comprada pronta depois.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="sp34"></div>
+    <div class="g2">
+      <div>
+        <h3 class="sub-t">Investimento do programa completo</h3>
+        <div class="tbox">
+          <table>
+            <thead><tr><th>Item</th><th>Fase</th><th class="num">Faixa (R$)</th></tr></thead>
+            <tbody>
+              <tr><td>Piloto de Valença (seção 09)</td><td>0–4</td><td class="num">110–190 mil</td></tr>
+              <tr><td>Drone multiespectral (2 unidades) + formação de pilotos</td><td>4–10</td><td class="num">180–260 mil</td></tr>
+              <tr><td>Rotulagem e análise laboratorial em escala</td><td>4–12</td><td class="num">120–180 mil</td></tr>
+              <tr><td>Equipe (cientista de dados sênior, dev mobile, GIS, agrônomo — 18 meses)</td><td>todas</td><td class="num">900 mil – 1,3 mi</td></tr>
+              <tr><td>Infraestrutura de nuvem (GPU, PostGIS, armazenamento)</td><td>6–18</td><td class="num">60–110 mil</td></tr>
+              <tr><td>UX, testes com produtores e extensão rural</td><td>10–18</td><td class="num">80–150 mil</td></tr>
+              <tr><td>Imagem orbital de alta resolução (além do programa gratuito para trópicos)</td><td>10–18</td><td class="num">0–120 mil</td></tr>
+              <tr class="tot"><td colspan="2"><b>Total estimado</b></td><td class="num"><b>1,35 – 2,0 mi</b></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="tiny" style="margin-top:10px">Comparação de referência: o mapeamento integral dos 5.168 ha exclusivamente por drone superaria com folga esse total apenas em horas de voo e processamento — o que é, em si, o argumento contra a cobertura total.</p>
+      </div>
+      <div>
+        <h3 class="sub-t">Onde buscar recurso</h3>
+        <div class="card">
+          <p class="small">
+            <strong>Fomento à pesquisa e inovação:</strong> Finep, CNPq/MCTI, Fapesb, Embrapii, editais de IA aplicada
+            à agricultura do MAPA.
+          </p>
+          <p class="small">
+            <strong>Crédito e desenvolvimento regional:</strong> BNDES, Banco do Nordeste (linhas verdes),
+            Sebrae para a parte de extensão e capacitação.
+          </p>
+          <p class="small mb0">
+            <strong>Arranjo institucional:</strong> a combinação de universidade pública (rotulagem laboratorial),
+            associação de produtores (adesão) e defesa sanitária estadual (canal oficial) é o que torna a proposta
+            elegível na maior parte desses editais — e é também o que faz o sistema sobreviver ao fim do financiamento.
+          </p>
+        </div>
+        <div class="card flat" style="margin-top:20px">
+          <h3 style="font-size:16px">Ativo estratégico do projeto</h3>
+          <p class="small mb0">
+            O principal ativo não será o algoritmo. Será o <strong>conjunto georreferenciado e fitopatologicamente validado
+            do cravo-da-índia do Baixo Sul</strong>, associado a séries de sensoriamento remoto, clima e histórico de manejo.
+            Publicado em padrão aberto e interoperável, ele viabiliza uma plataforma de vigilância muito mais ampla do que
+            uma única doença.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== 12 RISCOS ====================== -->
+<section class="sec" id="riscos">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Antes de começar</span>
+      <h2 class="sec-t"><span class="sec-num">12</span>Seis armadilhas que já derrubaram projetos parecidos</h2>
+    </div>
+
+    <div class="g3" style="margin-bottom:34px">
+      <div class="card lead-c"><h3>Rotular sem laboratório</h3><p class="small mb0">O modelo aprende "árvore estressada". Sem isolamento ou PCR no subconjunto, não há como afirmar <em class="sci">Cytospora</em> — e a afirmação errada tem custo regulatório e reputacional.</p></div>
+      <div class="card lead-c"><h3>GPS de celular no conjunto de treino</h3><p class="small mb0">Erro de 3 a 8 m desloca a copa em 1 a 3 pixels PlanetScope. Metade dos rótulos vai apontar para o vizinho sadio, e o problema só aparece no ano 2.</p></div>
+      <div class="card lead-c"><h3>Divisão aleatória de treino e teste</h3><p class="small mb0">Árvores vizinhas são quase idênticas. Acurácia de 97% na validação e 60% em campo é o resultado clássico de vazamento espacial.</p></div>
+      <div class="card lead-c"><h3>Reportar acurácia global</h3><p class="small mb0">Com incidência baixa, acurácia é ruído travestido de resultado. Use recall da classe doente e PR-AUC, e defina o limiar pelo custo real: falso negativo é foco que se espalha; falso positivo é visita desperdiçada. <strong>Priorize recall.</strong></p></div>
+      <div class="card lead-c"><h3>Ignorar o Ethrel</h3><p class="small mb0">É o confundidor sistemático mais forte da região. Sem registro de aplicação por talhão, o modelo aprende o calendário de colheita e chama isso de doença.</p></div>
+      <div class="card lead-c"><h3>Treinar só com imagem de laboratório</h3><p class="small mb0">Conjuntos públicos de folha em fundo neutro geram modelo que desaba em foto de campo. O modelo precisa ver <em class="sci">Cytospora</em> nas condições reais do Baixo Sul: contraluz, chuva, celular de entrada, mão trêmula.</p></div>
+    </div>
+
+    <h3 class="sub-t">Indicadores de acompanhamento</h3>
+    <p class="small" style="max-width:74ch;margin-bottom:20px">
+      Metas de projeto, não resultados demonstrados. Devem ser revistas após o primeiro conjunto rotulado próprio —
+      em detecção de doença em perenes, o desempenho real é determinado pela qualidade do rótulo e pela disciplina de
+      validação espacial, não pela escolha de arquitetura.
+    </p>
+    <div class="g4">
+      <div class="kpi"><div class="kn">≥ 0,90</div><div class="kl">Recall da classe cancro no classificador de foto de campo</div></div>
+      <div class="kpi a"><div class="kn">≥ 0,85</div><div class="kl">F1 no delineamento de copas dominantes em ortomosaico</div></div>
+      <div class="kpi b"><div class="kn">≥ 0,70</div><div class="kl">C-index do modelo de risco em município não visto no treino</div></div>
+      <div class="kpi c"><div class="kn">≥ 3×</div><div class="kl">Ganho no decil de maior risco — quantas vezes mais focos a fila de visita encontra em relação ao acaso</div></div>
+      <div class="kpi"><div class="kn">40–60</div><div class="kl">Propriedades-sentinela ativas ao fim do mês 10</div></div>
+      <div class="kpi a"><div class="kn">≥ 0,75</div><div class="kl">Kappa entre avaliadores na escala de severidade</div></div>
+      <div class="kpi b"><div class="kn">7</div><div class="kl">Municípios com cobertura operacional — 92% da área regional</div></div>
+      <div class="kpi c"><div class="kn">&lt; 72 h</div><div class="kl">Tempo entre alerta de alta confiança e visita técnica de confirmação</div></div>
+    </div>
+
+    <div class="callout" style="margin-top:34px">
+      <span class="k">Síntese em três linhas</span>
+      <p style="font-size:17.5px;line-height:1.55;margin-bottom:0">
+        <strong>NDVI com drone</strong> — insuficiente sozinho, mas o drone é indispensável como fonte de rótulo; use red-edge, não NDVI.
+        <strong>Satélite de 10 m</strong> — não como detector, sim como estratificador e monitor de mortalidade; suba para 3 m
+        para trabalhar por copa.
+        <strong>Rede neural supervisionada com app</strong> — é a aposta mais forte, desde que ancorada em fotos de tronco e ramo
+        e num pipeline de confirmação laboratorial. A integração das três, com um modelo de risco por cima, é a arquitetura
+        correta — e a única que cabe no orçamento de 5.168 hectares fragmentados.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== RODAPÉ ====================== -->
+<footer class="foot">
+  <div class="wrap">
+    <h4>Nota de método e limitações</h4>
+    <div class="g3">
+      <div>
+        <p class="small" style="color:rgba(255,255,255,.72)">
+          Números de produtores, área e municípios seguem a planilha do <strong>Censo Agropecuário 2017 do IBGE</strong>
+          (área colhida) fornecida como anexo. Séries paralelas do mesmo censo registram área com craveiros superior à
+          área colhida em vários municípios; o programa deve construir sua própria base de área plantada mapeada.
+          Dados de 2017 têm nove anos: recomenda-se atualização com a Produção Agrícola Municipal mais recente e com o CAR.
+        </p>
+      </div>
+      <div>
+        <p class="small" style="color:rgba(255,255,255,.72)">
+          Estimativas de rendimento de voo, custo e faixas de acurácia são <strong>ordens de grandeza para planejamento</strong>,
+          derivadas de patossistemas análogos — <em class="sci">Xylella</em> em oliveira, murcha do pinheiro, HLB dos citros —
+          e da literatura de diagnóstico móvel em agricultura familiar. Devem ser validadas com cotação local e com o piloto
+          antes de qualquer compromisso contratual. Valores econômicos regionais vêm de fontes setoriais de imprensa e são
+          referência de escala, não valor contábil.
+        </p>
+      </div>
+      <div>
+        <p class="small" style="color:rgba(255,255,255,.72)">
+          Nenhuma inferência deste sistema substitui diagnóstico fitopatológico oficial. Alertas devem ser tratados como
+          <strong>priorização de inspeção</strong>, não como declaração sanitária. A etiologia local deve ser confirmada
+          no piloto: há relatos regionais de mais de um agente associado à mortalidade do craveiro, e a arquitetura de
+          classes do modelo depende dessa confirmação.
+        </p>
+      </div>
+    </div>
+    <hr style="border:0;border-top:1px solid rgba(255,255,255,.15);margin:32px 0 22px">
+    <h4 style="font-size:20px;margin-bottom:12px">Fontes consultadas</h4>
+    <div class="g3">
+      <div>
+        <p class="small" style="color:rgba(255,255,255,.72);margin-bottom:8px"><strong style="color:#fff">Base de dados</strong></p>
+        <ul class="plain" style="color:rgba(255,255,255,.62);font-size:13.5px">
+          <li>IBGE, Censo Agropecuário 2017 — planilha anexa (área colhida, 22 municípios) · <a href="https://cidades.ibge.gov.br/brasil/ba/valenca/pesquisa/24/76693">IBGE Cidades</a></li>
+          <li>Série paralela de área com craveiros e produção por município, condensada em <a href="https://valencaagora.com/motivo-da-producao-do-cravo-da-india-somente-a-cada-dois-anos/">análise agronômica regional</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="small" style="color:rgba(255,255,255,.72);margin-bottom:8px"><strong style="color:#fff">Contexto da cultura e da doença</strong></p>
+        <ul class="plain" style="color:rgba(255,255,255,.62);font-size:13.5px">
+          <li><a href="https://www.fenagrobahia.com.br/post/baixo-sul-baiano-mantem-protagonismo-nacional-na-producao-de-cravo-da-india">Protagonismo do Baixo Sul na produção nacional</a> — movimentação anual, mortalidade a partir dos 8–10 anos, dependência do Ethrel</li>
+          <li><a href="https://valencaagora.com/seminario-discute-combate-a-mortalidade-de-craveiros-na-regiao/">Seminário sobre mortalidade de craveiros</a> — identificação dos agentes etiológicos pela UFRB e linhas de manejo em desenvolvimento</li>
+          <li><a href="http://www.ceplac.gov.br/radar/cravo.htm">CEPLAC — a cultura do cravo no Baixo Sul</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="small" style="color:rgba(255,255,255,.72);margin-bottom:8px"><strong style="color:#fff">Literatura técnica (conforme relatórios anexos)</strong></p>
+        <ul class="plain" style="color:rgba(255,255,255,.62);font-size:13.5px">
+          <li>Primeiro relato da morte súbita por <em class="sci">Cytospora eugeniae</em> no Brasil · <i>Plant Disease</i> (2020), DOI 10.1094/PDIS-10-19-2126-PDN</li>
+          <li>Detecção de <em class="sci">Xylella fastidiosa</em> em oliveira por sensoriamento aerotransportado · Zarco-Tejada et al., <i>Nature Plants</i> (2018) e <i>ISPRS J.</i> (2020)</li>
+          <li>Murcha do pinheiro com UAV e YOLO · <i>Ecological Informatics</i> e <i>Frontiers in Plant Science</i> (2024)</li>
+          <li>PlantVillage Nuru — acurácia de modelo em smartphone para diagnóstico em campo · <i>Frontiers in Plant Science</i> (2020)</li>
+          <li>Mapeamento de culturas de pequenos produtores com Sentinel e Planet · <i>Remote Sensing</i> (2021)</li>
+        </ul>
+      </div>
+    </div>
+    <hr style="border:0;border-top:1px solid rgba(255,255,255,.15);margin:26px 0 22px">
+    <p class="tiny">
+      Relatório executivo consolidado a partir de cinco estudos técnicos anteriores e da base censitária anexa ·
+      Morte súbita do craveiro (<em class="sci">Cytospora eugeniae</em> em <em class="sci">Syzygium aromaticum</em>) ·
+      Baixo Sul da Bahia · Julho de 2026 · versão 1
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>
