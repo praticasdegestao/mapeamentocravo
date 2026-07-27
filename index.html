@@ -303,6 +303,7 @@ hr.rule{border:0;border-top:1px solid var(--linha);margin:34px 0}
     <a href="#modelos">Modelos de IA</a>
     <a href="#app">App</a>
     <a href="#geo">Geolocalização</a>
+    <a href="#cadastro">CAR</a>
     <a href="#preditivo">Predição</a>
     <a href="#piloto">Piloto Valença</a>
     <a href="#mundo">Referências</a>
@@ -497,7 +498,7 @@ hr.rule{border:0;border-top:1px solid var(--linha);margin:34px 0}
       <div class="card lead-c">
         <span class="tiny">Premissa anterior → base real</span>
         <h3 style="margin-top:10px">22 municípios</h3>
-        <p class="small mb0">São 22 municípios baianos com produção registrada de cravo: 13 no Baixo Sul, 6 no Litoral Sul e 3 no Vale do Jiquiriçá em um raio de 150 km</p>
+        <p class="small mb0">São 22 municípios baianos com produção registrada de cravo: 13 no Baixo Sul, 6 no Litoral Sul e 3 no Vale do Jiquiriçá. O raio de 150 km da consulta original está correto; o número de municípios estava subestimado.</p>
       </div>
       <div class="card lead-c">
         <span class="tiny">Premissa anterior → base real</span>
@@ -620,10 +621,8 @@ hr.rule{border:0;border-top:1px solid var(--linha);margin:34px 0}
     <div class="callout">
       <span class="k">Correção da leitura econômica — refeita sobre o Censo 2017</span>
       <p class="small" style="margin-bottom:14px">
-        A versão anterior deste relatório usava os <strong>R$ 250 milhões</strong> citados pela imprensa setorial como se fossem
-        valor da produção. <strong>Não são.</strong> Esse número descreve a <em>movimentação da cadeia</em> — inclui
-        intermediação, beneficiamento e exportação. O valor da produção agrícola registrado pelo Censo Agropecuário 2017 é
-        <strong>R$ 23,157 milhões</strong>, cerca de <strong>onze vezes menor</strong>. Toda a análise de retorno abaixo foi
+         O valor da produção agrícola registrado pelo Censo Agropecuário 2017 é
+        <strong>R$ 23,157 milhões</strong>. Toda a análise de retorno abaixo foi
         recalculada sobre o dado censitário, que é o auditável.
       </p>
       <div class="tbox" style="margin:0 0 16px">
@@ -1294,12 +1293,207 @@ CREATE INDEX ON ocorrencia (talhao_id, data DESC);</pre>
   </div>
 </section>
 
+<!-- ====================== 08 CADASTRO CAR ====================== -->
+<section class="sec" id="cadastro">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Ação institucional · Aprocravo</span>
+      <h2 class="sec-t"><span class="sec-num">08</span>O CAR como base cadastral: o mapa antes do primeiro voo</h2>
+      <p class="lead">
+        O ativo geográfico mais barato deste programa já existe, já é georreferenciado e já foi declarado pelos próprios
+        produtores. Ele só não está organizado. <strong>A Aprocravo pode montar a base cadastral regional com trabalho de
+        escritório e consentimento dos associados</strong> — antes de gastar o primeiro real em drone.
+      </p>
+    </div>
+
+    <div class="callout ok">
+      <span class="k">A combinação que resolve o problema de "onde estão os craveiros"</span>
+      <p class="small" style="margin-bottom:12px">
+        O CAR entrega o <strong>perímetro do imóvel</strong>, mas não registra qual cultura está plantada dentro dele.
+        A janela fenológica de novembro–dezembro (seção 03) identifica <strong>onde há craveiro</strong>, mas não sabe de quem é
+        a terra nem onde termina a propriedade.
+      </p>
+      <p class="small mb0">
+        Separadamente, nenhuma das duas resolve. <strong>Sobrepostas, produzem exatamente o mapa que o programa precisa:</strong>
+        parcela por parcela, com dono identificado, área declarada, vizinhança de mata e presença de cravo. É a rota de menor
+        custo para sair de 5.168 hectares abstratos para uma lista de propriedades com nome, código e polígono.
+      </p>
+    </div>
+
+    <h3 class="sub-t">O que vem no CAR — e para que serve neste projeto</h3>
+    <div class="tbox" style="margin-bottom:26px">
+      <table>
+        <thead><tr><th style="width:27%">Camada declarada no CAR</th><th style="width:33%">Uso direto no programa</th><th>Onde entra</th></tr></thead>
+        <tbody>
+          <tr><td><b>Perímetro do imóvel</b></td><td>Base cadastral e quadro amostral; vínculo produtor ↔ imóvel ↔ talhões de cravo</td><td>Tabela <code style="font-family:'IBM Plex Mono',monospace;font-size:12.5px">propriedade</code> do modelo PostGIS (seção 07)</td></tr>
+          <tr><td><b>Área total do imóvel</b></td><td>Estratificação amostral por tamanho e por módulos fiscais; conferência contra a área colhida do censo</td><td>Desenho da rede sentinela e seleção do piloto</td></tr>
+          <tr><td><b>Remanescentes de vegetação nativa</b></td><td><b>Distância à borda de mata</b> — variável preditiva já identificada como relevante — obtida sem nenhum trabalho de campo</td><td>Modelo de risco M4 (seção 09)</td></tr>
+          <tr><td><b>APP e corpos d'água</b></td><td>Proxy de lençol raso e encharcamento sazonal, hipótese central para um patógeno oportunista de planta debilitada</td><td>Modelo de risco M4; estratificação por drenagem</td></tr>
+          <tr><td><b>Áreas consolidadas</b></td><td>Onde já há uso agrícola — portanto onde procurar craveiro e onde não procurar</td><td>Máscara de busca para a classificação orbital</td></tr>
+          <tr><td><b>Áreas de uso restrito</b></td><td>Várzeas e encostas íngremes: áreas de manejo limitado, com risco fitossanitário e logístico distinto</td><td>Priorização de visita e planejamento de voo</td></tr>
+          <tr><td><b>Reserva Legal</b></td><td>Conectividade do hospedeiro e do inóculo na paisagem; também define onde não cabe replantio</td><td>Modelo de dispersão; orientação de renovação de pomar</td></tr>
+          <tr class="tot"><td><b>Código do imóvel</b></td><td colspan="2"><b>Chave primária estável do banco de dados.</b> É o identificador que permite cruzar, anos depois, ocorrência, voo, amostra de laboratório, predição e crédito — sem depender de nome, apelido ou referência de estrada.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="sub-t">Duas vias de coleta — e a Aprocravo só precisa de uma delas por produtor</h3>
+    <div class="g2" style="margin-bottom:26px">
+      <div class="card lead-b">
+        <span class="bdg b-blue">Via A · base pública</span>
+        <h3 style="margin-top:12px">Baixar a geometria, sem pedir nada a ninguém</h3>
+        <p class="small">
+          A consulta pública do SICAR permite baixar os arquivos vetoriais do imóvel a partir do código do CAR, com as camadas
+          de área total, APP, Reserva Legal e uso consolidado. Convertidos para KML, abrem no Google Earth; em SIG livre como o
+          QGIS, entram direto no banco do projeto.
+        </p>
+        <p class="small mb0">
+          <strong>Na Bahia há uma particularidade:</strong> o cadastro é operado por sistema estadual próprio — o
+          <strong>CEFIR (Cadastro Estadual Florestal de Imóveis Rurais)</strong>, da Sema/Inema, dentro do SEIA, integrado ao
+          SICAR nacional. Trate o Inema como interlocutor institucional obrigatório, não apenas como repositório.
+        </p>
+      </div>
+      <div class="card lead-v">
+        <span class="bdg b-go">Via B · vínculo associativo</span>
+        <h3 style="margin-top:12px">Pedir o código, não o polígono</h3>
+        <p class="small">
+          O que a Aprocravo precisa obter de cada associado é <strong>o código do CAR e o consentimento de uso</strong> — um campo
+          de formulário e uma assinatura, não um levantamento de campo. Com o código, a geometria vem sozinha pela Via A.
+        </p>
+        <p class="small mb0">
+          Esse é o ponto que muda a economia do projeto: <strong>a base geográfica de centenas de propriedades pode ser montada
+          por duas pessoas em algumas semanas</strong>, com computador e telefone. Compare com o custo de georreferenciar as
+          mesmas propriedades em campo.
+        </p>
+      </div>
+    </div>
+
+    <h3 class="sub-t">Mutirão do CAR — começando por Valença</h3>
+    <p class="small" style="max-width:76ch;margin-bottom:20px">
+      A operação não é "coletar dados dos produtores". É <strong>prestar um serviço que o produtor quer</strong> e, como
+      subproduto, constituir a base do programa. Essa inversão é o que garante adesão — e é a mesma lógica que sustenta o
+      aplicativo mais adiante.
+    </p>
+
+    <div class="g-2-1">
+      <div>
+        <ol class="steps">
+          <li>
+            <strong>Acordo e papéis.</strong> Termo entre Aprocravo, Coopafbasul e o projeto, definindo quem guarda o dado,
+            para que serve e como o associado revoga o consentimento. Apoio técnico do IF Baiano campus Valença
+            (estudantes de agronomia como agentes cadastrais) e articulação com Ceplac, Bahiater e Inema.
+          </li>
+          <li>
+            <strong>Diagnóstico cadastral dos associados.</strong> Levantamento simples, por telefone e em reuniões de núcleo:
+            tem CAR? qual o código? está ativo, pendente, cancelado ou suspenso? está em nome de quem? Esta etapa sozinha já
+            revela o tamanho do problema e costuma surpreender.
+          </li>
+          <li>
+            <strong>Mutirão de inscrição e retificação.</strong> Atendimento coletivo para quem não tem cadastro, tem cadastro
+            com erro de perímetro ou tem cadastro em nome de terceiro ou de falecido. É aqui que o produtor recebe algo de
+            valor concreto — e é o que compra a adesão às etapas seguintes.
+          </li>
+          <li>
+            <strong>Consolidação em PostGIS.</strong> Download dos vetores, verificação topológica, detecção de sobreposições e
+            duplicidades, e carga na tabela <code style="font-family:'IBM Plex Mono',monospace;font-size:12.5px">propriedade</code>
+            com o código do CAR como chave.
+          </li>
+          <li>
+            <strong>Delimitação dos talhões de cravo.</strong> O CAR não faz isso. Dentro de cada polígono, o técnico desenha em
+            QField, sobre imagem de alta resolução e com o produtor ao lado, onde está o craveiro, a idade aproximada e o
+            consórcio. <strong>É esta camada que o programa cria e que não existe em lugar nenhum hoje.</strong>
+          </li>
+          <li>
+            <strong>Expansão para os municípios vizinhos.</strong> Mesmo protocolo, com agentes cadastrais formados em Valença
+            atuando como multiplicadores nos núcleos das demais associações.
+          </li>
+        </ol>
+      </div>
+      <div>
+        <div class="card lead-a" style="margin-bottom:20px">
+          <h3>Ordem de expansão sugerida</h3>
+          <div class="tbox" style="margin:12px 0 0">
+            <table style="min-width:0">
+              <thead><tr><th>Onda</th><th>Municípios</th><th class="num">Estab.</th><th class="num">% área</th></tr></thead>
+              <tbody>
+                <tr><td><b>1ª</b><br><span class="tiny">mês 1–4</span></td><td>Valença</td><td class="num">1.132</td><td class="num">37,9%</td></tr>
+                <tr><td><b>2ª</b><br><span class="tiny">mês 4–8</span></td><td>Camamu, Taperoá</td><td class="num">778</td><td class="num">31,0%</td></tr>
+                <tr><td><b>3ª</b><br><span class="tiny">mês 8–14</span></td><td>Igrapiúna, Ituberá, P. Tancredo Neves</td><td class="num">923</td><td class="num">21,2%</td></tr>
+                <tr><td><b>4ª</b><br><span class="tiny">mês 14–20</span></td><td>Nilo Peçanha, Piraí do Norte, Teolândia, Mutuípe</td><td class="num">467</td><td class="num">6,9%</td></tr>
+                <tr class="tot"><td colspan="2"><b>Total ao fim da 4ª onda</b></td><td class="num">3.300</td><td class="num">97,1%</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="small mb0" style="margin-top:12px">
+            Ao fim da terceira onda o programa já cobre <strong>90% da área regional</strong>. Os 12 municípios restantes somam
+            menos de 3% e podem ser atendidos por demanda, sem mutirão dedicado.
+          </p>
+        </div>
+        <div class="card flat">
+          <h3 style="font-size:16px">Meta de cobertura por onda</h3>
+          <ul class="tick">
+            <li>100% dos associados com situação cadastral levantada</li>
+            <li>≥ 70% com CAR ativo e vinculado ao banco do projeto</li>
+            <li>≥ 50% com talhões de cravo delimitados</li>
+            <li>100% dos vínculos com consentimento LGPD registrado e revogável</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="sp34"></div>
+    <div class="g2">
+      <div class="card lead-c">
+        <h3>O que o CAR não resolve — leia antes de prometer</h3>
+        <ul class="cross">
+          <li><strong>É autodeclaratório e, na prática, pouco analisado.</strong> O próprio Inema já estimou que, na capacidade operacional da época, a análise de todo o passivo estadual levaria décadas. Trate o polígono como <strong>geometria declarada</strong>, nunca como limite validado.</li>
+          <li><strong>É o imóvel, não o talhão.</strong> O craveiro está em algum lugar lá dentro. Delimitar onde continua sendo trabalho do projeto.</li>
+          <li><strong>Área declarada difere da matrícula.</strong> O desenho é feito sobre imagem de satélite; divergência com escritura e CCIR é comum e esperada.</li>
+          <li><strong>Sobreposições e duplicidades</strong> entre imóveis vizinhos são frequentes e precisam de tratamento topológico antes da carga no banco.</li>
+          <li><strong>Realidade fundiária da agricultura familiar:</strong> posse informal, herança não partilhada, cadastro em nome de parente falecido. O banco precisa suportar mais de um produtor por imóvel e imóvel sem produtor identificado.</li>
+          <li><strong>Comunidades quilombolas e tradicionais</strong> têm modalidade própria — a Bahia desenvolveu módulo específico no CEFIR. O território é coletivo, não imóvel individual, e o modelo de dados precisa comportar isso desde o início. No Baixo Sul essa não é uma exceção estatística.</li>
+        </ul>
+      </div>
+      <div class="card lead-v">
+        <h3>O que o produtor ganha ao entregar o código</h3>
+        <ul class="tick">
+          <li><strong>Acesso a crédito rural e seguro agrícola</strong> — a regularidade do CAR é pré-requisito corrente em financiamento e custeio</li>
+          <li><strong>Adesão ao Programa de Regularização Ambiental</strong>, com possibilidade de suspensão de sanções por passivos anteriores a julho de 2008</li>
+          <li><strong>Segurança jurídica</strong> em venda, sucessão e comprovação de regularidade</li>
+          <li><strong>Acesso a mercados</strong> que exigem comprovação ambiental — relevante para uma cultura majoritariamente exportadora</li>
+          <li><strong>O croqui da própria propriedade em mãos</strong> — muitos produtores nunca viram o mapa da terra em que trabalham. Na prática, é o item que mais gera adesão nas reuniões</li>
+          <li><strong>Planejamento agronômico</strong>: com o croqui, o técnico orienta renovação de pomar, adubação e onde é possível replantar — questão central, dado o relato de insucesso no replantio na mesma área</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="callout warn">
+      <span class="k">Governança do dado — decidir agora, não depois</span>
+      <p class="small mb0">
+        O CAR contém dado pessoal. O vínculo entre produtor e código só existe mediante <strong>consentimento explícito e
+        revogável</strong>, e deve ficar sob guarda da associação, não do consultor nem do fornecedor de tecnologia.
+        A geometria agregada pode ser publicada; a identificação do imóvel com foco confirmado, não — divulgação sempre em
+        grade agregada, como já previsto na seção 07. Escreva isso no termo de adesão antes do primeiro cadastro, porque
+        renegociar consentimento com 3.300 produtores depois é inviável.
+      </p>
+    </div>
+
+    <p class="tiny" style="margin-top:22px">
+      Referência de apoio para a capacitação dos agentes cadastrais e para o uso técnico do cadastro em projetos agropecuários:
+      <a href="https://agriconline.com.br/portal/artigo/car-cadastro-ambiental-rural-guia-para-produtores-rurais/">CAR (Cadastro Ambiental Rural): guia para profissionais</a>,
+      Portal Agriconline — cobre o passo a passo da inscrição no SICAR, a obtenção do código, o download dos arquivos vetoriais
+      na consulta pública e o uso do cadastro em QGIS para planejamento técnico. Para a Bahia, complementar com a documentação
+      do <a href="https://www.ba.gov.br/inema/programas/car-bahia-cefir">CEFIR/Inema</a>.
+    </p>
+  </div>
+</section>
+
 <!-- ====================== 08 PREDITIVO ====================== -->
 <section class="sec alt" id="preditivo">
   <div class="wrap">
     <div class="sec-head">
       <span class="eyebrow">Análise preditiva</span>
-      <h2 class="sec-t"><span class="sec-num">08</span>As variáveis que entram no modelo — e por que cada uma</h2>
+      <h2 class="sec-t"><span class="sec-num">09</span>As variáveis que entram no modelo — e por que cada uma</h2>
       <p class="lead">
         <em class="sci">Cytospora</em> é um patógeno oportunista de plantas debilitadas e de tecidos feridos. Isso define
         a hipótese de trabalho e, portanto, a lista de preditores: <strong>estresse do sistema radicular, ferimento e
@@ -1379,7 +1573,7 @@ CREATE INDEX ON ocorrencia (talhao_id, data DESC);</pre>
   <div class="wrap">
     <div class="sec-head">
       <span class="eyebrow">Ação inicial · o primeiro passo executável</span>
-      <h2 class="sec-t"><span class="sec-num" style="color:#96B93C">09</span>Piloto: 10 propriedades em Valença</h2>
+      <h2 class="sec-t"><span class="sec-num" style="color:#96B93C">10</span>Piloto: 10 propriedades em Valença</h2>
       <p class="lead">
         O plano de visitar 10 propriedades com foco atual ou histórico da doença na região de Valença está
         <strong>correto como primeiro passo</strong> — desde que o objetivo declarado seja o certo. Este piloto
@@ -1562,10 +1756,14 @@ CREATE INDEX ON ocorrencia (talhao_id, data DESC);</pre>
       <div>
         <div class="card dk" style="border-color:rgba(150,185,60,.45)">
           <span class="tiny" style="color:#96B93C">PROPORÇÃO</span>
-          <h3 style="margin-top:8px">O piloto custa o equivalente a 2 a 4 hectares</h3>
+          <h3 style="margin-top:8px">O piloto custa de 2 a 5 hectares perdidos em definitivo</h3>
+          <p class="small" style="color:rgba(255,255,255,.82)">
+            Pela base censitária corrigida (seção 02), cada hectare perdido de forma permanente vale entre
+            <strong>R$ 37 e R$ 56 mil</strong> a preços de 2017 — valor presente do fluxo de produção que a área deixa de
+            gerar, e não apenas de uma safra. O piloto inteiro equivale a duas a cinco propriedades médias perdidas.
+          </p>
           <p class="small mb0" style="color:rgba(255,255,255,.82)">
-            Com cerca de R$ 48 mil por hectare por ano de movimentação regional, o piloto inteiro equivale à produção
-            anual de duas a quatro propriedades médias. Se ele evitar a perda de <strong>quatro hectares</strong>, já se pagou.
+            A preços atuais de cravo, bem acima dos de 2017, esse ponto de equilíbrio cai para menos de dois hectares.
           </p>
         </div>
         <div class="sp24"></div>
@@ -1618,7 +1816,7 @@ CREATE INDEX ON ocorrencia (talhao_id, data DESC);</pre>
   <div class="wrap">
     <div class="sec-head">
       <span class="eyebrow">Precedentes</span>
-      <h2 class="sec-t"><span class="sec-num">10</span>O que já foi resolvido em outros países</h2>
+      <h2 class="sec-t"><span class="sec-num">11</span>O que já foi resolvido em outros países</h2>
       <p class="lead">
         Sete programas que resolveram partes deste problema. O padrão comum: nenhum deles resolveu com uma única fonte de
         dado, e todos investiram mais em verdade de campo do que em modelo.
@@ -1679,12 +1877,12 @@ CREATE INDEX ON ocorrencia (talhao_id, data DESC);</pre>
         <p class="small mb0">Sedia o fórum da cadeia produtiva do cravo no Baixo Sul e tem presença permanente no município do piloto. Porta de entrada para mão de obra técnica e para articulação com produtores.</p>
       </div>
       <div class="card lead-a">
-        <h3 style="font-size:16px">Aprocravo · Coopafbasul</h3>
+        <h3 style="font-size:16px">Aprocravo</h3>
         <p class="small mb0">Associação de produtores e cooperativa da agricultura familiar. Sem elas não há adesão ao app nem consentimento em escala; com elas, o dado agregado ganha dono institucional legítimo.</p>
       </div>
       <div class="card lead-b">
-        <h3 style="font-size:16px">Embrapa · Ceplac · ADAB · SDR-BA</h3>
-        <p class="small mb0">Validação científica, extensão e defesa sanitária. A ADAB é o canal oficial: sem defesa agropecuária no arranjo, um alerta do sistema não vira ação sanitária.</p>
+        <h3 style="font-size:16px">Embrapa Mandioca e Fruticultura - Embrapa Territorial - UESB - UESC - Ceplac - ADAB - SDR-BA</h3>
+        <p class="small mb0">Pesquisa & Desenvolvimento, sensoriamento remoto, inteligência artificial, extensão rural e defesa sanitária. A ADAB é o canal oficial: sem defesa agropecuária no arranjo, um alerta do sistema não vira ação sanitária.</p>
       </div>
     </div>
   </div>
@@ -1695,7 +1893,7 @@ CREATE INDEX ON ocorrencia (talhao_id, data DESC);</pre>
   <div class="wrap">
     <div class="sec-head">
       <span class="eyebrow">Execução</span>
-      <h2 class="sec-t"><span class="sec-num">11</span>Do piloto ao serviço — 18 meses</h2>
+      <h2 class="sec-t"><span class="sec-num">12</span>Do piloto ao serviço — 18 meses</h2>
       <p class="lead">
         Cada fase termina num ponto de decisão explícito. Se o orçamento vier em partes, a ordem de construção abaixo
         maximiza o valor do que já foi gasto.
@@ -1708,7 +1906,7 @@ CREATE INDEX ON ocorrencia (talhao_id, data DESC);</pre>
           <div class="tli">
             <div class="td">Mês 0–4 · fundação</div>
             <div class="th">Piloto de Valença e protocolo</div>
-            <p class="small">As 10 propriedades descritas na seção 09. Acordos institucionais, escala de severidade, consentimento LGPD, banco PostGIS, primeira campanha de drone e confirmação laboratorial.</p>
+            <p class="small">As 10 propriedades descritas na seção 10. Acordos institucionais, escala de severidade, consentimento LGPD, banco PostGIS, primeira campanha de drone e confirmação laboratorial.</p>
             <div class="tdel">Entrega: protocolo publicado + base geoespacial + conjunto rotulado v1 + decisão go/no-go</div>
           </div>
           <div class="tli">
@@ -1762,7 +1960,7 @@ CREATE INDEX ON ocorrencia (talhao_id, data DESC);</pre>
           <table>
             <thead><tr><th>Item</th><th>Fase</th><th class="num">Faixa (R$)</th></tr></thead>
             <tbody>
-              <tr><td>Piloto de Valença (seção 09)</td><td>0–4</td><td class="num">110–190 mil</td></tr>
+              <tr><td>Piloto de Valença (seção 10)</td><td>0–4</td><td class="num">110–190 mil</td></tr>
               <tr><td>Drone multiespectral (2 unidades) + formação de pilotos</td><td>4–10</td><td class="num">180–260 mil</td></tr>
               <tr><td>Rotulagem e análise laboratorial em escala</td><td>4–12</td><td class="num">120–180 mil</td></tr>
               <tr><td>Equipe (cientista de dados sênior, dev mobile, GIS, agrônomo — 18 meses)</td><td>todas</td><td class="num">900 mil – 1,3 mi</td></tr>
@@ -1811,7 +2009,7 @@ CREATE INDEX ON ocorrencia (talhao_id, data DESC);</pre>
   <div class="wrap">
     <div class="sec-head">
       <span class="eyebrow">Antes de começar</span>
-      <h2 class="sec-t"><span class="sec-num">12</span>Seis armadilhas que já derrubaram projetos parecidos</h2>
+      <h2 class="sec-t"><span class="sec-num">13</span>Seis armadilhas que já derrubaram projetos parecidos</h2>
     </div>
 
     <div class="g3" style="margin-bottom:34px">
